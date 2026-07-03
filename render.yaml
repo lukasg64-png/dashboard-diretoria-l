@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dashboard-diretoria-l
+    env: node
+    buildCommand: npm install && npm run build && cd server && npm install
+    startCommand: cd server && node --max-old-space-size=460 server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: UPLOAD_TOKEN
+        value: sjcomercial
+      - key: RENDER_EXTERNAL_URL
+        value: https://dashboard-diretoria-ldashboard-diretoria.onrender.com

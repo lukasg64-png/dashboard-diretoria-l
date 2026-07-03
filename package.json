@@ -1,0 +1,21 @@
+{
+  "name": "dashboard-diretoria-l",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard Diretoria L — Acompanhamento Digital",
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "vite build",
+    "server": "node --max-old-space-size=460 server/server.js",
+    "start": "concurrently \"node --max-old-space-size=460 server/server.js\" \"vite --port 5174\""
+  },
+  "dependencies": {
+    "recharts": "^2.12.7",
+    "lucide-react": "^0.447.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.10",
+    "concurrently": "^9.1.0"
+  }
+}
