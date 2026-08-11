@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import CuponsPage from './components/CuponsPage';
+import API from './api';
 
 function App() {
+  const [couponRaw, setCouponRaw] = useState([]);
+  const [couponLoading, setCouponLoading] = useState(false);
+  const [couponSync, setCouponSync] = useState(null);
+  const [couponTotalOrders, setCouponTotalOrders] = useState(0);
+
+  // Filtros
+  const [fDist, setFDist] = useState('all');
+  const [fCoord, setFCoord] = useState('all');
+  const [fFilial, setFFilial] = useState('all');
+  const [fDateMode, setFDateMode] = useState('hoje');
+  const [fCustomDate, setFCustomDate] = useState(new Date().toISOString().slice(0, 10));
+  const [fCoupon, setFCoupon] = useState('');
+
+  const loadCoupons = async () => {
+    setCouponLoading(true);
+    try {
+      const res = await API.getCoupons();
+      if (res.status === 'success') {
+        setCouponRaw(res.data || []);
+        setCouponSync(res.sync || null);
+        setCouponTotalOrders(res.totalOrders || 0);
+      }
+    } catch (err) {
+      console.error('Erro ao carregar cupons:', err);
+    } finally {
+      setCouponLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadCoupons();
+  }, []);
+
   return (
     <div style={{ minHeight: '100vh', background: '#f0f4f8', fontFamily: "'Inter', system-ui, sans-serif" }}>
       {/* ── Topbar ── */}
@@ -30,7 +64,25 @@ function App() {
 
       {/* ── Conteúdo Cupons ── */}
       <div style={{ padding: '20px 24px' }}>
-        <CuponsPage />
+        <CuponsPage
+          couponRaw={couponRaw}
+          couponLoading={couponLoading}
+          couponSync={couponSync}
+          couponTotalOrders={couponTotalOrders}
+          loadCoupons={loadCoupons}
+          fDist={fDist}
+          setFDist={setFDist}
+          fCoord={fCoord}
+          setFCoord={setFCoord}
+          fFilial={fFilial}
+          setFFilial={setFFilial}
+          fDateMode={fDateMode}
+          setFDateMode={setFDateMode}
+          fCustomDate={fCustomDate}
+          setFCustomDate={setFCustomDate}
+          fCoupon={fCoupon}
+          setFCoupon={setFCoupon}
+        />
       </div>
     </div>
   );
