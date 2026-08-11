@@ -1,600 +1,370 @@
 /**
- * server.js — Dashboard Diretoria L
- * Lê APENAS a aba BASE DASHBOARD do arquivo Excel.
- * Atualizar o Excel = atualizar o dashboard. Simples e rápido.
+ * server.js — Dashboard Diretoria L — Cupons VTEX
+ * Servidor dedicado para acompanhamento de cupons via API VTEX OMS.
  *
  * Porta: 3005 (configurável via .env PORT=)
- * Arquivo padrão: ../ base Dashboard.xlsx
  */
 
 require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 
 const express = require('express');
 const cors    = require('cors');
-const XLSX    = require('xlsx');
 const path    = require('path');
 const fs      = require('fs');
-const readline = require('readline');
-const multer  = require('multer');
-const { Storage } = require('@google-cloud/storage');
+const vtexSync = require('./vtexSync');
 
 const app  = express();
 const PORT = process.env.PORT || 3005;
 
-// Caminhos padrão locais (Excel para upload/conversão, CSV para leitura em tempo de execução)
-const CSV_NAME   = 'base_dashboard.csv';
-const localOneUpCSV = path.join(__dirname, '..', CSV_NAME);
-const localTwoUpCSV = path.join(__dirname, '..', '..', CSV_NAME);
-const DEFAULT_CSV = fs.existsSync(localOneUpCSV) ? localOneUpCSV : localTwoUpCSV;
-const CSV_PATH    = process.env.CSV_PATH || DEFAULT_CSV;
+// Cadastro de Filiais (Coordenadores, Distritais e Localização Geográfica)
+const CADASTRO_PATH = path.join(__dirname, 'filiais_cadastro.json');
+let filiaisCadastro = {};
+const lookupCache = new Map();
+const canonKeysMap = new Map();
+const cityNumKeysMap = new Map();
 
-const localOneUp = path.join(__dirname, '..', 'base Dashboard.xlsx');
-const localTwoUp = path.join(__dirname, '..', '..', 'base Dashboard.xlsx');
-const DEFAULT_EXCEL = fs.existsSync(localOneUp) ? localOneUp : localTwoUp;
-const EXCEL_PATH    = process.env.EXCEL_PATH || DEFAULT_EXCEL;
+function buildLookupIndexes() {
+  lookupCache.clear();
+  canonKeysMap.clear();
+  cityNumKeysMap.clear();
 
-// Configuração Google Cloud Storage (GCS)
-const GCS_BUCKET = process.env.GCS_BUCKET;
-const FILE_NAME  = 'base_dashboard.csv'; // Salvamos apenas o CSV no GCS para leveza absoluta
-let storageClient = null;
+  for (const key of Object.keys(filiaisCadastro)) {
+    const normKey = normalizeStoreName(key);
+    const canonKey = canonicalize(normKey);
+    canonKeysMap.set(canonKey, key);
 
-if (GCS_BUCKET) {
-  // Localmente, tenta carregar o arquivo de credenciais da pasta Downloads se existir,
-  // senão utiliza Application Default Credentials (ADC) em produção
-  const saKeyPath = 'C:\\Users\\lucas.alves6\\Downloads\\ga-fsj-c165e892c46a.json';
-  if (fs.existsSync(saKeyPath)) {
-    storageClient = new Storage({ keyFilename: saKeyPath });
-  } else {
-    storageClient = new Storage();
+    const item = filiaisCadastro[key];
+    if (item && item.municipio) {
+      const normCity = normalizeStoreName(item.municipio);
+      const numMatch = key.match(/\b(\d+)\b/);
+      const num = numMatch ? numMatch[1] : '';
+      const cityKey = (normCity + ' ' + num).trim();
+      cityNumKeysMap.set(cityKey, key);
+    }
   }
-  console.log(`☁️ GCS configurado: bucket = ${GCS_BUCKET}`);
+}
+
+function loadFiliaisCadastro() {
+  if (fs.existsSync(CADASTRO_PATH)) {
+    try {
+      filiaisCadastro = JSON.parse(fs.readFileSync(CADASTRO_PATH, 'utf8'));
+      buildLookupIndexes();
+      console.log(`ℹ️ [cadastro] carregado com ${Object.keys(filiaisCadastro).length} filiais da Diretoria L.`);
+    } catch (err) {
+      console.error(`❌ Erro ao ler filiais_cadastro.json:`, err.message);
+    }
+  }
+}
+
+// ── Mapeamento Fuzzy para Associação com a VTEX ────────────────────────────────
+function normalizeStoreName(str) {
+  if (!str) return '';
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+const ABBREVIATION_MAP = {
+  'baln': 'balneario',
+  'bal': 'balneario',
+  'floripa': 'florianopolis',
+  'sta': 'santa',
+  'sto': 'santo',
+  'eng': 'engenheiro',
+  'mal': 'marechal',
+  'dioni': 'dionisio',
+  'cnel': 'coronel',
+  'fco': 'francisco',
+  'franc': 'francisco',
+  'gal': 'galeria',
+  'hosp': 'hospital',
+  'louren': 'lourenco',
+  'terez': 'terezinha',
+  'ant': 'antonio',
+  's': 'sao',
+};
+
+const CITY_SUFFIX_MAP = {
+  'sapucaia': 'sapucaia sul',
+  'venancio': 'venancio aires',
+  'rosario': 'rosario do sul',
+  'cachoeira': 'cachoeira do sul',
+  'sao lourenco do sul': 'sao lourenco',
+  'sao lourenco oeste': 'sao lourenco do oeste',
+  'sao sebastiao cai': 'sao sebastiao',
+  'julio castilhos': 'julio de castilhos',
+  'quedas iguacu': 'quedas do iguacu',
+  'cruzeiro oeste': 'cruzeiro do oeste',
+  'sao miguel iguacu': 'sao miguel do iguacu',
+  'encruzilhada sul': 'encruzilhada do sul',
+  'cerro grande sul': 'cerro grande',
+  'cerro grande do sul': 'cerro grande',
+  'sao miguel oeste': 'sao miguel do oeste',
+  'bela vista paraiso': 'bela vista do paraiso',
+  'balneario arroio silva': 'balneario arroio do silva',
+  'sao pedro sul': 'sao pedro do sul',
+};
+
+const SPECIAL_VTEX_TO_CSV = {
+  'farmacias sao joao delivery': 'porto alegre dark store',
+  'pf': 'pf matriz',
+  'pf matriz': 'pf matriz',
+  'pf modelo': 'pf loja modelo',
+  'pf uruguai': 'pf uruguai',
+  'pf shopping bella': 'pf shopping',
+  'pf general netto': 'pf general neto',
+  'gruarapuava': 'guarapuava',
+  'santo amaro': 'santo amaro imperatriz',
+  'sao francisco paula': 'sao fran paula',
+  'sao francisco de paula': 'sao fran paula',
+  'santa terezinha de itaipu': 'santa terezinha do itaipu',
+  'santa terezinha itaipu': 'santa terezinha do itaipu',
+  'santo antonio missoes': 'santo antonio das missoes',
+  'caxias 21': 'caxias 20',
+  'sjdigital1601': 'santo antonio das missoes',
+};
+
+function canonicalize(normName) {
+  let res = String(normName).toLowerCase();
+  if (SPECIAL_VTEX_TO_CSV[res] && SPECIAL_VTEX_TO_CSV[res] !== res) {
+    return canonicalize(SPECIAL_VTEX_TO_CSV[res]);
+  }
+  res = res.replace(/([a-z])(\d)/g, '$1 $2');
+  res = res.replace(/\b0+(\d+)\b/g, '$1');
+  res = res.replace(/\s+(rs|pr|sc)\s*$/g, '');
+  res = res.replace(/\s+(rs|pr|sc)\s+(\d)/g, ' $2');
+  res = res
+    .replace(/\s*-\s*(nova|shop|gal|hosp|merc|pr|sc|rs)\b/gi, '')
+    .replace(/\b(nova|shop|gal|hosp|merc)\b/gi, '')
+    .replace(/\bnv\b/g, '')
+    .replace(/\bnov\b/g, '')
+    .replace(/\b1nov\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const words = res.split(' ');
+  const expanded = words.map(w => ABBREVIATION_MAP[w] || w);
+  res = expanded.join(' ');
+  res = res.replace(/d\s+/g, 'd').replace(/d'/g, 'd');
+
+  const numberMatch = res.match(/^(.+?)\s+(\d+)$/);
+  if (numberMatch) {
+    const baseName = numberMatch[1].trim();
+    const num = numberMatch[2];
+    if (CITY_SUFFIX_MAP[baseName]) {
+      res = CITY_SUFFIX_MAP[baseName] + ' ' + num;
+    }
+  } else {
+    if (CITY_SUFFIX_MAP[res]) {
+      res = CITY_SUFFIX_MAP[res];
+    }
+  }
+
+  const finalNumMatch = res.match(/^(.+?)\s+(\d+)$/);
+  if (finalNumMatch) {
+      const bName = finalNumMatch[1].trim();
+      if (SPECIAL_VTEX_TO_CSV[bName] && SPECIAL_VTEX_TO_CSV[bName] !== bName) {
+          res = SPECIAL_VTEX_TO_CSV[bName] + ' ' + finalNumMatch[2];
+      }
+  }
+
+  if (SPECIAL_VTEX_TO_CSV[res] && SPECIAL_VTEX_TO_CSV[res] !== res) {
+    return canonicalize(SPECIAL_VTEX_TO_CSV[res]);
+  }
+  return res.replace(/\s+/g, ' ').trim();
+}
+
+loadFiliaisCadastro();
+
+
+function lookupStore(vtexCleanName) {
+  if (!vtexCleanName) return null;
+  if (lookupCache.has(vtexCleanName)) {
+    return lookupCache.get(vtexCleanName);
+  }
+
+  const normName = normalizeStoreName(vtexCleanName);
+  if (filiaisCadastro[normName]) {
+    const res = { ...filiaisCadastro[normName], matchedKey: normName };
+    lookupCache.set(vtexCleanName, res);
+    return res;
+  }
+  
+  const canon = canonicalize(normName);
+  if (canonKeysMap.has(canon)) {
+    const key = canonKeysMap.get(canon);
+    const res = { ...filiaisCadastro[key], matchedKey: key };
+    lookupCache.set(vtexCleanName, res);
+    return res;
+  }
+  
+  const numMatch = canon.match(/^(.+?)\s+(\d+)$/);
+  if (numMatch) {
+    const baseName = numMatch[1].trim();
+    const num = numMatch[2];
+    
+    if (canonKeysMap.has(baseName)) {
+      const key = canonKeysMap.get(baseName);
+      const res = { ...filiaisCadastro[key], matchedKey: key };
+      lookupCache.set(vtexCleanName, res);
+      return res;
+    }
+    
+    const cityKey = (baseName + ' ' + num).trim();
+    if (cityNumKeysMap.has(cityKey)) {
+      const key = cityNumKeysMap.get(cityKey);
+      const res = { ...filiaisCadastro[key], matchedKey: key };
+      lookupCache.set(vtexCleanName, res);
+      return res;
+    }
+  } else {
+    if (cityNumKeysMap.has(canon)) {
+      const key = cityNumKeysMap.get(canon);
+      const res = { ...filiaisCadastro[key], matchedKey: key };
+      lookupCache.set(vtexCleanName, res);
+      return res;
+    }
+  }
+  
+  lookupCache.set(vtexCleanName, null);
+  return null;
 }
 
 app.use(cors());
 app.use(express.json());
 
-// ─── Helpers ───────────────────────────────────────────────────────────────
-function safe(v) {
-  if (v === null || v === undefined || v === '' || v === '-') return 0;
-  const n = parseFloat(String(v).replace(',', '.'));
-  return isNaN(n) ? 0 : n;
-}
-function round2(v) { return Math.round(v * 100) / 100; }
-function pct(val, base)   { return base ? round2((val / base) * 100) : 0; }
-function varP(cur, prev)  { return prev ? round2(((cur - prev) / prev) * 100) : 0; }
+// ─── Rotas ─────────────────────────────────────────────────────────────────
 
-// Função para baixar a planilha do GCS
-async function downloadFromGCS(destPath, gcsFileName) {
-  if (!storageClient || !GCS_BUCKET) return false;
-  const fileName = gcsFileName || FILE_NAME;
+app.get('/api/coupons', (req, res) => {
   try {
-    const bucket = storageClient.bucket(GCS_BUCKET);
-    const file = bucket.file(fileName);
-    const [exists] = await file.exists();
-    if (!exists) {
-      console.log(`⚠️ Planilha ${fileName} não encontrada no bucket GCS. Usando fallback local.`);
-      return false;
-    }
-    await file.download({ destination: destPath });
-    console.log(`☁️ Planilha ${fileName} baixada do GCS com sucesso.`);
-    return true;
-  } catch (err) {
-    console.error(`❌ Erro ao baixar planilha do GCS:`, err.message);
-    return false;
-  }
-}
-
-
-
-// ─── Leitura por Stream de CSV (Usa quase 0 de RAM e é 15x mais rápido) ────
-async function readCSVAsync(filePath) {
-  return new Promise((resolve, reject) => {
-    const records = [];
-    const fileStream = fs.createReadStream(filePath, 'utf8');
-    const rl = readline.createInterface({
-      input: fileStream,
-      crlfDelay: Infinity
-    });
-
-    let header = null;
-    let C = {};
-
-    rl.on('line', (line) => {
-      // Split básico por ponto e vírgula
-      const row = line.split(';');
-      if (!header) {
-        header = row.map(val => val.trim().replace(/^"|"$/g, ''));
+    const cache = vtexSync.getOrdersCache();
+    const list = [];
+    
+    Object.values(cache).forEach(order => {
+      // Filtra pedidos que têm cupom e que não estão cancelados
+      if (order.coupon && order.status !== 'canceled') {
+        const seller = order.sellers?.[0]?.name || '';
+        // Limpa o nome do seller da VTEX (ex: "LOJA 123 - 88.212.113/0001-00 - 123" -> "LOJA 123")
+        const cleanSeller = seller.includes(' - ') ? seller.split(' - ')[0].trim() : seller;
+        const storeInfo = lookupStore(cleanSeller);
         
-        function findColIndex(predicate, fallbackIndex) {
-          const i = header.findIndex(predicate);
-          return i >= 0 ? i : fallbackIndex;
+        // FILTRO: Apenas lojas da Diretoria L (que estão no cadastro)
+        if (!storeInfo) return;
+        
+        let dateStr = '';
+        let utcDateStr = '';
+        if (order.creationDate) {
+          const d = new Date(order.creationDate);
+          utcDateStr = d.toISOString().slice(0, 10);
+          const brt = new Date(d.getTime() - 3 * 3600000);
+          dateStr = brt.toISOString().slice(0, 10);
         }
 
-        const distIndex = findColIndex(h => /distrital/i.test(h), 1);
-        const coordIndex = findColIndex(h => /coordenador/i.test(h), 2);
-        const filialIndex = findColIndex(h => /desc_filial|filial/i.test(h), 3);
-        const grupoIndex = findColIndex(h => /desc_grupo|grupo/i.test(h), 4);
-        const linhaIndex = findColIndex(h => /desc_linha|linha/i.test(h), 5);
-        const metaParcIndex = findColIndex(h => /meta\s+parcial/i.test(h), 7);
-        const metaTotIndex = findColIndex(h => /^meta\s+(?!parcial)/i.test(h), 6);
-        const metaTotHeader = header[metaTotIndex] || '';
-        const currentMonth = metaTotHeader.replace(/^meta\s+/i, '').trim();
-        const monthRegex = currentMonth ? new RegExp(currentMonth, 'i') : /julho/i;
-
-        const vJul26Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 8);
-        const vJul25Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 9);
-        const vJun26Index = findColIndex(h => /venda/i.test(h) && !monthRegex.test(h) && /(26|2026)$/.test(h), 10);
-        const beJul26Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 11);
-        const beJul25Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 12);
-
-        C = {
-          dist:      distIndex,
-          coord:     coordIndex,
-          filial:    filialIndex,
-          grupo:     grupoIndex,
-          linha:     linhaIndex,
-          metaTot:   metaTotIndex,
-          metaParc:  metaParcIndex,
-          vJul26:    vJul26Index,
-          vJul25:    vJul25Index,
-          vJun26:    vJun26Index,
-          beJul26:   beJul26Index,
-          beJul25:   beJul25Index,
-          labelJul26: String(header[vJul26Index] || 'Julho/26').replace('Venda Parcial ', ''),
-          labelJun26: String(header[vJun26Index] || 'Junho/26').replace('Venda Parcial ', '')
-        };
-        return;
-      }
-
-      const distValRaw = row[C.dist];
-      if (distValRaw == null || distValRaw === '') return;
-
-      const getVal = (idx) => {
-        const val = row[idx];
-        return val != null ? val.replace(/^"|"$/g, '') : null;
-      };
-
-      records.push({
-        dist:   String(getVal(C.dist)   || '').trim(),
-        coord:  String(getVal(C.coord)  || '').trim(),
-        filial: String(getVal(C.filial) || '').trim(),
-        grupo:  String(getVal(C.grupo)  || '').trim(),
-        linha:  String(getVal(C.linha)  || '').trim(),
-        mt:     safe(getVal(C.metaTot)),
-        mp:     safe(getVal(C.metaParc)),
-        v26:    safe(getVal(C.vJul26)),
-        v25:    safe(getVal(C.vJul25)),
-        jun:    safe(getVal(C.vJun26)),
-        be26:   safe(getVal(C.beJul26)),
-        be25:   safe(getVal(C.beJul25)),
-      });
-    });
-
-    rl.on('close', () => {
-      resolve({
-        records,
-        label_mes_atual: C.labelJul26 || 'Julho/26',
-        label_mes_ant:   C.labelJun26 || 'Junho/26',
-        arquivo:         path.basename(filePath),
-        lido_em:         new Date().toISOString()
-      });
-    });
-
-    rl.on('error', (err) => {
-      reject(err);
-    });
-  });
-}
-
-// ─── Agregação de registros ──────────────────────────────────────────────────
-function aggregate(records) {
-  const dists    = {};
-  const coords   = {};
-  const grupos   = {};
-  const linhas   = {};  // key = "grupo||linha" para manter relação
-  const filiais  = {};
-  const cdDist   = {};  // coordenador → distrital
-  const flCoord  = {};  // filial → coordenador
-  const lgMap    = {};  // linha → grupo (primeiro grupo encontrado)
-  
-  let gt = { 
-    mt:0, mp:0, v26:0, v25:0, jun:0, be26:0, be25:0,
-    v26_eb:0, be26_eb:0, v25_eb:0, be25_eb:0 
-  };
-
-  for (const r of records) {
-    const { dist, coord, filial, grupo, linha, mt, mp, v26, v25, jun, be26, be25 } = r;
-
-    function add(map, key) {
-      if (!map[key]) {
-        map[key] = { 
-          mt:0, mp:0, v26:0, v25:0, jun:0, be26:0, be25:0,
-          v26_eb:0, be26_eb:0, v25_eb:0, be25_eb:0 
-        };
-      }
-      map[key].mt  += mt;
-      map[key].mp  += mp;
-      map[key].v26 += v26;
-      map[key].v25 += v25;
-      map[key].jun += jun;
-      map[key].be26+= be26;
-      map[key].be25+= be25;
-      
-      if (be26 > 0) {
-        map[key].v26_eb  += v26;
-        map[key].be26_eb += be26;
-      }
-      if (be25 > 0) {
-        map[key].v25_eb  += v25;
-        map[key].be25_eb += be25;
-      }
-    }
-
-    gt.mt  += mt;
-    gt.mp  += mp;
-    gt.v26 += v26;
-    gt.v25 += v25;
-    gt.jun += jun;
-    gt.be26+= be26;
-    gt.be25+= be25;
-
-    if (be26 > 0) {
-      gt.v26_eb  += v26;
-      gt.be26_eb += be26;
-    }
-    if (be25 > 0) {
-      gt.v25_eb  += v25;
-      gt.be25_eb += be25;
-    }
-
-    if (dist)   { add(dists,   dist); }
-    if (coord)  { add(coords,  coord); cdDist[coord] = dist; }
-    if (filial) { add(filiais, filial); flCoord[filial] = coord; }
-    if (grupo)  { add(grupos,  grupo); }
-    // Agrupa linhas por grupo: chave composta para manter relação
-    if (linha) {
-      const linhaKey = grupo ? `${grupo}||${linha}` : linha;
-      add(linhas, linhaKey);
-      if (!lgMap[linhaKey]) lgMap[linhaKey] = grupo || '';
-    }
-  }
-
-  function m(v) {
-    return {
-      meta_total:       round2(v.mt),
-      meta_parcial:     round2(v.mp),
-      venda_jul26:     round2(v.v26),
-      venda_jul25:     round2(v.v25),
-      venda_jun26:     round2(v.jun),
-      base_emp_jul26:  round2(v.be26),
-      base_emp_jul25:  round2(v.be25),
-      pct_meta_total:   pct(v.v26, v.mt),
-      pct_meta_parcial: pct(v.v26, v.mp),
-      evol_yoy:         varP(v.v26, v.v25),
-      evol_mom:         varP(v.v26, v.jun),
-      pct_ecomm_jul26:  pct(v.v26_eb, v.be26_eb),
-      pct_ecomm_jul25:  pct(v.v25_eb, v.be25_eb),
-    };
-  }
-
-  return {
-    total: m(gt),
-    distritoriais: Object.entries(dists).map(([nome, v]) => ({
-      nome, ...m(v),
-    })),
-    coordenadores: Object.entries(coords).map(([nome, v]) => ({
-      nome, distrital: cdDist[nome] || '', ...m(v),
-    })),
-    filiais: Object.entries(filiais).map(([nome, v]) => ({
-      nome, coordenador: flCoord[nome] || '', ...m(v),
-    })),
-    grupos: Object.entries(grupos).map(([nomeOrig, v]) => ({
-      nome:         nomeOrig.replace(/\(\d+\)$/, '').trim(),
-      nomeOriginal: nomeOrig,
-      ...m(v),
-    })),
-    linhas: Object.entries(linhas).map(([key, v]) => {
-      const sep = key.indexOf('||');
-      const grupoNome = sep >= 0 ? key.substring(0, sep).replace(/\(\d+\)$/, '').trim() : (lgMap[key] || '');
-      const linhaName = sep >= 0 ? key.substring(sep + 2) : key;
-      return {
-        nome: linhaName,
-        grupo: grupoNome,
-        ...m(v),
-      };
-    }),
-  };
-}
-
-// ─── Cache em memória ───────────────────────────────────────────────────────
-let cache = { data: null, ts: 0 };
-const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 horas (ou até novo upload/refresh)
-
-async function getCached() {
-  const now = Date.now();
-  if (cache.data && (now - cache.ts) < CACHE_TTL_MS) return cache.data;
-
-  // Baixar do GCS ou ler local
-  const tmp = path.join(require('os').tmpdir(), `dash_c_${Date.now()}.csv`);
-  let loaded = false;
-  if (GCS_BUCKET && storageClient) {
-    loaded = await downloadFromGCS(tmp, CSV_NAME);
-  }
-
-  const csvFileToRead = loaded ? tmp : CSV_PATH;
-  if (!fs.existsSync(csvFileToRead)) {
-    // Não há dados carregados — retornar null para que as rotas mostrem tela de upload
-    console.warn(`⚠️ [getCached] CSV não encontrado em: ${csvFileToRead}. Aguardando upload do usuário.`);
-    return null;
-  }
-
-  const data = await readCSVAsync(csvFileToRead);
-
-  if (loaded) {
-    try { fs.unlinkSync(tmp); } catch (_) {}
-  }
-
-  data.globalAgg = aggregate(data.records);
-  cache = { data, ts: now };
-  console.log(`[cache] dados brutos carregados de ${path.basename(csvFileToRead)} às ${new Date().toLocaleTimeString('pt-BR')} — ${data.records.length} registros`);
-  return data;
-}
-
-function clearCache() { cache = { data: null, ts: 0 }; }
-
-// ─── Filtro pós-cache ───────────────────────────────────────────────────────
-function applyFilters(full, filters) {
-  const { distrital, coordenador, filial, grupo, linha } = filters;
-
-  const isAll = (!distrital || distrital === 'all') &&
-                (!coordenador || coordenador === 'all') &&
-                (!filial || filial === 'all') &&
-                (!grupo || grupo === 'all') &&
-                (!linha || linha === 'all');
-
-  if (isAll && full.globalAgg) {
-    return {
-      total:          full.globalAgg.total,
-      filtered_total: full.globalAgg.total,
-      distritoriais:  full.globalAgg.distritoriais,
-      coordenadores:  full.globalAgg.coordenadores,
-      filiais:        full.globalAgg.filiais,
-      grupos:         full.globalAgg.grupos,
-      linhas:         full.globalAgg.linhas,
-      label_mes_atual: full.label_mes_atual,
-      label_mes_ant:   full.label_mes_ant,
-      arquivo:         full.arquivo,
-      lido_em:         full.lido_em,
-    };
-  }
-
-  let records = full.records;
-
-  // Filtragem sequencial
-  if (distrital && distrital !== 'all') {
-    records = records.filter(r => r.dist === distrital);
-  }
-  if (coordenador && coordenador !== 'all') {
-    records = records.filter(r => r.coord === coordenador);
-  }
-  if (filial && filial !== 'all') {
-    records = records.filter(r => r.filial === filial);
-  }
-  if (grupo && grupo !== 'all') {
-    records = records.filter(r => r.grupo.replace(/\(\d+\)$/, '').trim() === grupo);
-  }
-  if (linha && linha !== 'all') {
-    records = records.filter(r => r.linha === linha);
-  }
-
-  const globalAgg = full.globalAgg || aggregate(full.records);
-  const filteredAgg = aggregate(records);
-
-  return {
-    total:          globalAgg.total,
-    filtered_total: filteredAgg.total,
-    distritoriais:  filteredAgg.distritoriais,
-    coordenadores:  filteredAgg.coordenadores,
-    filiais:        filteredAgg.filiais,
-    grupos:         filteredAgg.grupos,
-    linhas:         filteredAgg.linhas,
-    label_mes_atual: full.label_mes_atual,
-    label_mes_ant:   full.label_mes_ant,
-    arquivo:         full.arquivo,
-    lido_em:         full.lido_em,
-  };
-}
-
-// ─── Rotas ─────────────────────────────────────────────────────────────────
-const upload = multer({ 
-  dest: require('os').tmpdir(),
-  limits: { fileSize: 200 * 1024 * 1024 } // Limite de 200MB
-});
-const uploadSingle = upload.single('file');
-const UPLOAD_TOKEN = process.env.UPLOAD_TOKEN || 'sjcomercial';
-
-app.post('/api/upload', (req, res, next) => {
-  uploadSingle(req, res, (err) => {
-    if (err) {
-      console.error('[/api/upload] Erro no multer:', err.message || err);
-      return res.status(400).json({ status: 'error', error: `Erro no upload do arquivo: ${err.message || 'Falha na transferência'}` });
-    }
-    next();
-  });
-}, async (req, res) => {
-  try {
-    // Limpar cache em memória ANTES de processar o upload para liberar RAM
-    // Isso evita pico de memória que derruba o processo Node.js (causando Erro HTTP 502 no proxy/load balancer)
-    clearCache();
-    if (global.gc) { try { global.gc(); } catch (_) {} }
-
-    const token = req.body.token;
-    if (token !== UPLOAD_TOKEN) {
-      if (req.file && req.file.path) {
-        try { fs.unlinkSync(req.file.path); } catch (_) {}
-      }
-      return res.status(401).json({ status: 'error', error: 'Senha incorreta para upload.' });
-    }
-
-    if (!req.file) {
-      return res.status(400).json({ status: 'error', error: 'Nenhum arquivo enviado.' });
-    }
-
-    const localTempPath = req.file.path;
-
-    // O arquivo agora é enviado diretamente como CSV pré-processado pelo navegador!
-    // Isso evita completamente o estouro de memória (OOM / Erro 502) no backend.
-    // Vamos apenas validar se as colunas essenciais estão presentes no CSV.
-    try {
-      const firstLine = await new Promise((resolve, reject) => {
-        const stream = fs.createReadStream(localTempPath, { encoding: 'utf8', start: 0, end: 1024 });
-        let buffer = '';
-        stream.on('data', chunk => {
-          buffer += chunk;
-          const lf = buffer.indexOf('\n');
-          if (lf >= 0) {
-            resolve(buffer.substring(0, lf));
-            stream.destroy();
-          }
+        list.push({
+          orderId: order.orderId,
+          date: dateStr,
+          utcDate: utcDateStr,
+          creationDate: order.creationDate || '',
+          coupon: String(order.coupon).toUpperCase().trim(),
+          value: order.value ? order.value / 100 : 0, // VTEX envia valor em centavos
+          store: storeInfo.matchedKey || cleanSeller,
+          coordenador: storeInfo.coordenador || '',
+          distrital: storeInfo.distrital || '',
+          municipio: storeInfo.municipio || '',
+          uf: storeInfo.uf || ''
         });
-        stream.on('end', () => resolve(buffer));
-        stream.on('error', err => reject(err));
-      });
-
-      if (!firstLine || !firstLine.toLowerCase().includes('distrital')) {
-        throw new Error('O arquivo não parece conter um cabeçalho válido com a coluna "Distrital". Certifique-se de enviar a planilha correta.');
       }
-    } catch (err) {
-      try { fs.unlinkSync(localTempPath); } catch (_) {}
-      return res.status(400).json({ status: 'error', error: `Validação do CSV falhou: ${err.message}` });
-    }
+    });
 
-    // Salvar no GCS se configurado, ou substituir arquivo local
-    if (GCS_BUCKET && storageClient) {
-      try {
-        console.log(`☁️ Enviando CSV para o GCS gs://${GCS_BUCKET}/${FILE_NAME}...`);
-        const bucket = storageClient.bucket(GCS_BUCKET);
-        await bucket.upload(localTempPath, {
-          destination: FILE_NAME,
-          metadata: { cacheControl: 'no-cache' }
-        });
-        console.log(`☁️ CSV salvo no GCS.`);
-      } catch (gcsErr) {
-        try { fs.unlinkSync(localTempPath); } catch (_) {}
-        throw new Error(`Erro ao salvar no Google Cloud Storage: ${gcsErr.message}`);
-      }
-    } else {
-      console.log(`💾 Salvando CSV localmente em ${CSV_PATH}...`);
-      fs.copyFileSync(localTempPath, CSV_PATH);
-    }
-
-    // Limpar arquivo temporário
-    try { fs.unlinkSync(localTempPath); } catch (_) {}
-    
-    clearCache();
-    if (global.gc) { try { global.gc(); } catch (_) {} }
-
-    res.json({ status: 'ok', msg: 'Planilha atualizada com sucesso!' });
-  } catch (err) {
-    console.error('[/api/upload] Erro:', err.message);
-    res.status(500).json({ status: 'error', error: err.message });
-  }
-});
-
-app.get('/api/metas', async (req, res) => {
-  try {
-    const full = await getCached();
-    if (!full) {
-      return res.json({ status: 'no_data', msg: 'Nenhuma planilha carregada. Faça o upload do arquivo base_dashboard.csv pelo portal.' });
-    }
-    const filters = {
-      distrital:   req.query.distrital   || 'all',
-      coordenador: req.query.coordenador || 'all',
-      filial:      req.query.filial      || 'all',
-      grupo:       req.query.grupo       || 'all',
-      linha:       req.query.linha       || 'all',
-    };
-    const data = applyFilters(full, filters);
-
-    // Calcular as opções globais de filtros e seus relacionamentos
-    const globalAgg = full.globalAgg || aggregate(full.records);
-    const options = {
-      distritoriais: globalAgg.distritoriais.map(d => ({ nome: d.nome })),
-      coordenadores: globalAgg.coordenadores.map(c => ({ nome: c.nome, distrital: c.distrital })),
-      filiais: globalAgg.filiais.map(f => ({ nome: f.nome, coordenador: f.coordenador })),
-      grupos: globalAgg.grupos.map(g => ({ nome: g.nomeOriginal || g.nome })),
-      linhas: globalAgg.linhas.map(l => ({ nome: l.nome, grupo: l.grupo }))
-    };
-
-    res.json({ status: 'ok', data, filters, options, cache_age_ms: Date.now() - cache.ts });
-  } catch (err) {
-    console.error('[/api/metas] Erro:', err.message);
-    res.status(500).json({ status: 'error', error: err.message });
-  }
-});
-
-app.get('/api/detalhes', async (req, res) => {
-  try {
-    const full = await getCached();
-    if (!full) {
-      return res.json({ status: 'no_data', msg: 'Nenhuma planilha carregada.' });
-    }
-    const filters = {
-      distrital:   req.query.distrital   || 'all',
-      coordenador: req.query.coordenador || 'all',
-      filial:      req.query.filial      || 'all',
-    };
-    const data = applyFilters(full, filters);
     res.json({
-      status:   'ok',
-      grupos:   data.grupos,
-      linhas:   data.linhas,
-      filiais:  data.filiais,
-      total:    data.grupos.reduce((s, g) => s + 1, 0),
-      label_mes_atual: data.label_mes_atual,
-      label_mes_ant:   data.label_mes_ant,
+      status: 'success',
+      sync: vtexSync.getSyncState(),
+      totalOrders: Object.keys(cache).length,
+      data: list
     });
   } catch (err) {
-    console.error('[/api/detalhes] Erro:', err.message);
-    res.status(500).json({ status: 'error', error: err.message });
-  }
-});
-
-app.get('/api/filtros', async (req, res) => {
-  try {
-    const full = await getCached();
-    const globalAgg = full.globalAgg || aggregate(full.records);
-    res.json({
-      status:        'ok',
-      distritoriais:  globalAgg.distritoriais.map(d => d.nome).sort(),
-      coordenadores:  globalAgg.coordenadores.map(c => c.nome).sort(),
-      filiais:        globalAgg.filiais.map(f => f.nome).sort(),
-    });
-  } catch (err) {
-    console.error('[/api/filtros] Erro:', err.message);
-    res.status(500).json({ status: 'error', error: err.message });
-  }
-});
-
-// Limpar cache + recarregar (para botão de refresh)
-app.post('/api/refresh', async (req, res) => {
-  clearCache();
-  try {
-    const full = await getCached();
-    res.json({ status: 'ok', msg: 'Cache limpo e dados recarregados', rows: full.filiais.length });
-  } catch (err) {
+    console.error('[/api/coupons] Erro:', err.message);
     res.status(500).json({ status: 'error', error: err.message });
   }
 });
 
 app.get('/api/health', (req, res) => {
   res.json({
-    status:        'ok',
-    csv_path:      CSV_PATH,
-    csv_exists:    fs.existsSync(CSV_PATH),
-    port:          PORT,
-    cache_age_ms:  cache.ts ? Date.now() - cache.ts : null,
+    status: 'ok',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    memory: process.memoryUsage(),
+    sync: vtexSync.getSyncState(),
+    cached_orders: Object.keys(vtexSync.getOrdersCache()).length
   });
+});
+
+app.get('/api/vtex-debug', async (req, res) => {
+  const key   = process.env.VTEX_APP_KEY;
+  const token = process.env.VTEX_APP_TOKEN;
+  const acct  = process.env.VTEX_ACCOUNT || 'sjdigital';
+  const preview = (s) => s ? `${s.slice(0, 6)}...${s.slice(-4)} (${s.length} chars)` : 'NOT SET';
+
+  if (!key || !token) {
+    return res.json({
+      status: 'missing_credentials',
+      vtex_app_key:   preview(key),
+      vtex_app_token: preview(token),
+      fix: 'Configure VTEX_APP_KEY e VTEX_APP_TOKEN nas Environment Variables do Render.'
+    });
+  }
+
+  try {
+    const testUrl = `https://${acct}.vtexcommercestable.com.br/api/oms/pvt/orders?per_page=1&page=1`;
+    const axios = require('axios');
+    const result = await axios.get(testUrl, {
+      headers: {
+        'Accept': 'application/json',
+        'X-VTEX-API-AppKey': key,
+        'X-VTEX-API-AppToken': token,
+      },
+      timeout: 10000,
+      validateStatus: () => true,
+    });
+
+    const vtexOrders = vtexSync.getOrdersCache();
+    const orderValues = Object.values(vtexOrders);
+    const withCoupon = orderValues.filter(o => o.coupon && o.status !== 'canceled');
+    const matchedL = withCoupon.filter(o => {
+      const seller = o.sellers?.[0]?.name || '';
+      const cleanSeller = seller.includes(' - ') ? seller.split(' - ')[0].trim() : seller;
+      return lookupStore(cleanSeller) !== null;
+    });
+
+    res.json({
+      status:                result.status === 200 ? 'ok' : 'vtex_error',
+      vtex_http_status:      result.status,
+      vtex_response_snippet: JSON.stringify(result.data).slice(0, 500),
+      vtex_account:          acct,
+      vtex_app_key:          preview(key),
+      vtex_app_token:        preview(token),
+      cadastro_keys_count:   Object.keys(filiaisCadastro).length,
+      cached_orders_count:   Object.keys(vtexOrders).length,
+      orders_with_coupon:    withCoupon.length,
+      orders_matched_l:      matchedL.length,
+      sync_state:            vtexSync.getSyncState()
+    });
+  } catch (err) {
+    res.status(500).json({ status: 'error', error: err.message });
+  }
+});
+
+// ─── Trigger manual de sync VTEX (força reprocessamento completo) ──────────────
+app.post('/api/vtex-sync', async (req, res) => {
+  const forceFull = req.query.full === 'true';
+  res.json({ status: 'started', forceFull });
+  vtexSync.syncVtexData(forceFull).catch(err =>
+    console.error('[Manual Sync] Falhou:', err.message)
+  );
 });
 
 // Servir arquivos estáticos do frontend React compilados (pasta dist)
@@ -611,24 +381,31 @@ if (fs.existsSync(distPath)) {
 }
 
 app.listen(PORT, () => {
-  console.log(`\n🚀 Dashboard Diretoria C — http://localhost:${PORT}`);
-  console.log(`📊 Excel: ${EXCEL_PATH}`);
-  console.log(`   Existe: ${fs.existsSync(EXCEL_PATH) ? '✅' : '❌'}\n`);
+  console.log(`\n🚀 Dashboard Diretoria L — Cupons VTEX — http://localhost:${PORT}`);
 
-  // ─── Keep-alive: pinga o próprio servidor a cada 10 min ─────────────────
-  // Evita que o Render Free Tier hiberne e perca os arquivos em disco.
+  // ─── Keep-alive: pinga o próprio servidor a cada 10 min ────────────────────
   const RENDER_URL = process.env.RENDER_EXTERNAL_URL;
   if (RENDER_URL) {
-    const http = require('https');
-    const PING_INTERVAL_MS = 10 * 60 * 1000; // 10 minutos
+    const https = require('https');
+    const PING_INTERVAL_MS = 10 * 60 * 1000;
     setInterval(() => {
       const url = `${RENDER_URL}/api/health`;
-      http.get(url, (res) => {
-        console.log(`💓 Keep-alive ping → ${url} [${res.statusCode}]`);
+      https.get(url, (pingRes) => {
+        console.log(`💓 Keep-alive ping → ${url} [${pingRes.statusCode}]`);
       }).on('error', (err) => {
         console.warn(`⚠️ Keep-alive falhou: ${err.message}`);
       });
     }, PING_INTERVAL_MS);
     console.log(`💓 Keep-alive ativo: pingando ${RENDER_URL}/api/health a cada 10 min`);
   }
+
+  // Inicializa o sync de cupons em segundo plano após 5 segundos da inicialização
+  setTimeout(() => {
+    vtexSync.syncVtexData().catch(err => console.error('[Startup Sync] Falhou:', err.message));
+  }, 5000);
+
+  // Executa o sync a cada 60 minutos
+  setInterval(() => {
+    vtexSync.syncVtexData().catch(err => console.error('[Interval Sync] Falhou:', err.message));
+  }, 60 * 60 * 1000);
 });

@@ -1,4 +1,4 @@
-const BASE = window.location.port === '5173' ? 'http://localhost:3005/api' : '/api';
+const BASE = window.location.port === '5174' || window.location.port === '5173' ? 'http://localhost:3005/api' : '/api';
 
 async function req(path, params = {}) {
   const url = new URL(`${BASE}${path}`, window.location.origin);
@@ -13,40 +13,7 @@ async function req(path, params = {}) {
 }
 
 export default {
-  getMetas: (filters = {}) => req('/metas', filters),
-  getDetalhes: (filters = {}) => req('/detalhes', filters),
-  getFiltros: () => req('/filtros'),
-  refresh: () => fetch(`${BASE}/refresh`, { method: 'POST' }).then(r => r.json()),
+  getCoupons: () => req('/coupons'),
   health: () => req('/health'),
-  uploadExcel: async (file, token) => {
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('token', token);
-    const res = await fetch(`${BASE}/upload`, {
-      method: 'POST',
-      body: formData,
-    });
-    if (!res.ok) {
-      if (res.status === 502) {
-        throw new Error('Erro HTTP 502 (Bad Gateway): O servidor caiu ou esgotou a memória ao tentar processar a planilha. Tente novamente após o servidor reiniciar.');
-      }
-      if (res.status === 413) {
-        throw new Error('Erro HTTP 413: O arquivo da planilha excede o tamanho máximo permitido no servidor.');
-      }
-      if (res.status === 504) {
-        throw new Error('Erro HTTP 504: O envio do arquivo demorou muito e excedeu o tempo limite do servidor.');
-      }
-      const text = await res.text();
-      let msg = '';
-      try {
-        const json = JSON.parse(text);
-        if (json.error) msg = json.error;
-      } catch (_) {}
-      if (!msg) {
-        msg = text.length > 150 ? `Erro HTTP ${res.status}: Erro interno no servidor` : (text || `Erro HTTP ${res.status}`);
-      }
-      throw new Error(msg);
-    }
-    return res.json();
-  }
+  triggerSync: (full = false) => fetch(`${BASE}/vtex-sync?full=${full}`, { method: 'POST' }).then(r => r.json()),
 };
