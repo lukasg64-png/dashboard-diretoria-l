@@ -839,48 +839,57 @@ app.post('/api/upload', (req, res, next) => {
       return res.status(400).json({ status: 'error', error: 'Nenhum arquivo enviado.' });
     }
 
-    const localTempPath = req.file.path;
+    let localTempPath = req.file.path;
+    let convertedCsvPath = null;
 
     try {
-      const firstLine = await new Promise((resolve, reject) => {
-        const stream = fs.createReadStream(localTempPath, { encoding: 'utf8', start: 0, end: 1024 });
-        let buffer = '';
-        stream.on('data', chunk => {
-          buffer += chunk;
-          const lf = buffer.indexOf('\n');
-          if (lf >= 0) {
-            resolve(buffer.substring(0, lf));
-            stream.destroy();
-          }
-        });
-        stream.on('end', () => resolve(buffer));
-        stream.on('error', err => reject(err));
-      });
+      // Verificar se é arquivo Excel (.xlsx/.xls ou cabeçalho PK)
+      let isExcel = req.file.originalname && (req.file.originalname.endsWith('.xlsx') || req.file.originalname.endsWith('.xls'));
+      if (!isExcel) {
+        const buf = Buffer.alloc(4);
+        const fd = fs.openSync(localTempPath, 'r');
+        fs.readSync(fd, buf, 0, 4, 0);
+        fs.closeSync(fd);
+        if (buf.toString('hex') === '504b0304') isExcel = true;
+      }
+
+      if (isExcel) {
+        console.log('📦 Arquivo Excel (.xlsx/.xls) recebido no upload. Convertendo para CSV...');
+        const wb = XLSX.readFile(localTempPath, { dense: true });
+        const sheetName = wb.SheetNames.find(n => n.toUpperCase().includes('BASE')) || wb.SheetNames[0];
+        const sheet = wb.Sheets[sheetName];
+        const csvContent = XLSX.utils.sheet_to_csv(sheet, { FS: ';' });
+        
+        convertedCsvPath = localTempPath + '.csv';
+        fs.writeFileSync(convertedCsvPath, csvContent, 'utf-8');
+        console.log(`✅ Excel convertido com sucesso (${csvContent.length} bytes).`);
+      }
+
+      const checkPath = convertedCsvPath || localTempPath;
+      const content = fs.readFileSync(checkPath, 'utf-8');
+      const firstLine = content.slice(0, content.indexOf('\n'));
 
       if (!firstLine || !firstLine.toLowerCase().includes('filial')) {
         throw new Error('O arquivo não parece conter um cabeçalho válido com a coluna "Filial" ou "Desc_Filial". Certifique-se de enviar a planilha correta.');
       }
-    } catch (err) {
-      try { fs.unlinkSync(localTempPath); } catch (_) {}
-      return res.status(400).json({ status: 'error', error: `Validação do CSV falhou: ${err.message}` });
-    }
 
-    if (GCS_BUCKET && storageClient) {
-      try {
+      const finalUploadPath = convertedCsvPath || localTempPath;
+      if (GCS_BUCKET && storageClient) {
         console.log(`☁️ Enviando CSV para o GCS gs://${GCS_BUCKET}/${FILE_NAME}...`);
         const bucket = storageClient.bucket(GCS_BUCKET);
-        await bucket.upload(localTempPath, {
+        await bucket.upload(finalUploadPath, {
           destination: FILE_NAME,
           metadata: { cacheControl: 'no-cache' }
         });
         console.log(`☁️ CSV salvo no GCS.`);
-      } catch (gcsErr) {
-        try { fs.unlinkSync(localTempPath); } catch (_) {}
-        throw new Error(`Erro ao salvar no Google Cloud Storage: ${gcsErr.message}`);
+      } else {
+        console.log(`💾 Salvando CSV localmente em ${CSV_PATH}...`);
+        fs.copyFileSync(finalUploadPath, CSV_PATH);
       }
-    } else {
-      console.log(`💾 Salvando CSV localmente em ${CSV_PATH}...`);
-      fs.copyFileSync(localTempPath, CSV_PATH);
+    } catch (err) {
+      try { fs.unlinkSync(localTempPath); } catch (_) {}
+      if (convertedCsvPath) { try { fs.unlinkSync(convertedCsvPath); } catch (_) {} }
+      return res.status(400).json({ status: 'error', error: `Validação da planilha falhou: ${err.message}` });
     }
 
     try { fs.unlinkSync(localTempPath); } catch (_) {}
