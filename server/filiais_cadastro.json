@@ -2634,5 +2634,29 @@
   "Sao Sebastiao 2": {
     "distrital": "Luiz Kuhn",
     "coordenador": "Tamires Vingert"
+  },
+  "Criciuma 2": {
+    "distrital": "Cleiton Lima",
+    "coordenador": "Rafael Florencio",
+    "municipio": "Criciúma",
+    "uf": "SC"
+  },
+  "Gravatai 15 - Nova": {
+    "distrital": "Luiz Kuhn",
+    "coordenador": "Bruna Rodrigues",
+    "municipio": "Gravataí",
+    "uf": "RS"
+  },
+  "Gravatai 15": {
+    "distrital": "Luiz Kuhn",
+    "coordenador": "Bruna Rodrigues",
+    "municipio": "Gravataí",
+    "uf": "RS"
+  },
+  "Igrejinha 5": {
+    "distrital": "Luiz Kuhn",
+    "coordenador": "Patricia Eitelvein",
+    "municipio": "Igrejinha",
+    "uf": "RS"
   }
 }

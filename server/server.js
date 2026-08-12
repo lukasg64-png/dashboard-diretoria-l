@@ -392,7 +392,8 @@ async function readCSVAsync(filePath) {
       const filialName = String(getVal(C.filial) || '').trim();
       if (!filialName) return;
 
-      const cadastro = filiaisCadastro[filialName] || {};
+      const storeInfo = lookupStore(filialName);
+      const cadastro = storeInfo || {};
       const distVal = (C.dist >= 0 ? String(getVal(C.dist) || '').trim() : '') || cadastro.distrital || '';
       const coordVal = (C.coord >= 0 ? String(getVal(C.coord) || '').trim() : '') || cadastro.coordenador || '';
 
