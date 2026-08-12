@@ -13,7 +13,19 @@ async function req(path, params = {}) {
 }
 
 export default {
+  getData: (filters) => req('/metas', filters),
+  getMetas: (filters) => req('/metas', filters),
+  getFilters: () => req('/filtros'),
   getCoupons: () => req('/coupons'),
   health: () => req('/health'),
   triggerSync: (full = false) => fetch(`${BASE}/vtex-sync?full=${full}`, { method: 'POST' }).then(r => r.json()),
+  uploadExcel: async (file, token) => {
+    const fd = new FormData();
+    fd.append('file', file);
+    fd.append('token', token);
+    const res = await fetch(`${BASE}/upload`, { method: 'POST', body: fd });
+    const json = await res.json();
+    if (!res.ok || json.status !== 'ok') throw new Error(json.error || 'Erro no upload');
+    return json;
+  }
 };
