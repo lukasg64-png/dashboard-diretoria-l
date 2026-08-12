@@ -128,7 +128,9 @@ const CITY_SUFFIX_MAP = {
 };
 
 const SPECIAL_VTEX_TO_CSV = {
-  'farmacias sao joao delivery': 'porto alegre dark store',
+  'farmacias sao joao delivery': 'dark store porto alegre',
+  'porto alegre dark store': 'dark store porto alegre',
+  'dark store porto alegre': 'dark store porto alegre',
   'pf': 'pf matriz',
   'pf matriz': 'pf matriz',
   'pf modelo': 'pf loja modelo',
@@ -326,6 +328,7 @@ function getStrVal(id) {
 
 // ─── Leitura por Stream de CSV (Usa quase 0 de RAM e é 15x mais rápido) ────
 async function readCSVAsync(filePath) {
+  clearCache();
   return new Promise((resolve, reject) => {
     const tempRecords = [];
     const fileStream = fs.createReadStream(filePath, 'utf8');
