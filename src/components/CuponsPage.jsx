@@ -96,16 +96,9 @@ export default function CuponsPage({
 
     return couponRaw.filter(item => {
       if (!item) return false;
-      let itemBrtDate = item.date;
-      if (!itemBrtDate && item.creationDate) {
-        try {
-          const d = new Date(item.creationDate);
-          if (!isNaN(d.getTime())) {
-            itemBrtDate = new Date(d.getTime() - 3 * 3600000).toISOString().slice(0, 10);
-          }
-        } catch (_) {}
-      }
-      return itemBrtDate && itemBrtDate >= startDate && itemBrtDate <= endDate;
+      const d = item.date;
+      const u = item.utcDate;
+      return (d && d >= startDate && d <= endDate) || (u && u >= startDate && u <= endDate);
     });
   }, [couponRaw, fDateMode, fCustomDate]);
 

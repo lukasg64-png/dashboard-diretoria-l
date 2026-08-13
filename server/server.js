@@ -1047,10 +1047,13 @@ app.get('/api/coupons', (req, res) => {
           const d = new Date(order.creationDate);
           if (!isNaN(d.getTime())) {
             utcDateStr = d.toISOString().slice(0, 10);
-            dateStr = d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
-            const ptDate = d.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-            const ptTime = d.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            dateTimeStr = `${ptDate} ${ptTime}`;
+            const brtDate = new Date(d.getTime() - 3 * 3600000);
+            const isoBrt = brtDate.toISOString();
+            dateStr = isoBrt.slice(0, 10);
+            const [ymd, hms] = isoBrt.split('T');
+            const [y, m, day] = ymd.split('-');
+            const timeStr = hms.slice(0, 8);
+            dateTimeStr = `${day}/${m}/${y} ${timeStr}`;
           }
         }
 
