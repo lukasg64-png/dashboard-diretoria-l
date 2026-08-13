@@ -711,11 +711,7 @@ export default function CuponsPage({
                           <XAxis type="number" stroke="#94a3b8" fontSize={9} fontWeight={600} hide />
                           <YAxis dataKey="coupon" type="category" stroke="#0f2050" fontSize={9} fontWeight={700} width={80} tick={{ fontSize: 9 }} />
                           <Tooltip contentStyle={tooltipStyle} formatter={v => [fmtInteger(v), 'Utilizações']} />
-                          <Bar dataKey="uses" fill="#10b981" radius={[0, 4, 4, 0]} maxBarSize={18}>
-                            {topCouponsChart.map((_, i) => (
-                              <rect key={i} />
-                            ))}
-                          </Bar>
+                          <Bar dataKey="uses" fill="#10b981" radius={[0, 4, 4, 0]} maxBarSize={18} />
                         </BarChart>
                       </ResponsiveContainer>
                     </div>

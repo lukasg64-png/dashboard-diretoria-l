@@ -656,7 +656,7 @@ function aggregate(indices) {
           ...m(v),
         };
       })
-      .filter(l => l.nome && l.nome.trim() !== ''),
+      .filter(l => l.nome && l.nome.trim() !== '' && (l.venda_jul26 !== 0 || l.venda_jul25 !== 0 || l.venda_jun26 !== 0 || l.meta_total !== 0 || l.meta_parcial !== 0)),
   };
 }
 
