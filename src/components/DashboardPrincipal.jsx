@@ -93,9 +93,8 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
       { key: 'nome', label: 'Distrital', width: '200px', render: v => <span className="bold-text text-highlight">{v}</span> },
       { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
       { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta', align: 'right', width: '130px', type: 'progress' },
-      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
+      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
       { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
     ];
@@ -114,9 +113,8 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
       { key: 'nome', label: 'Coordenador', width: '200px', render: v => <span className="bold-text text-highlight">{v}</span> },
       { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
       { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta', align: 'right', width: '130px', type: 'progress' },
-      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
+      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
       { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
     ];
@@ -135,9 +133,8 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
       { key: 'nome', label: 'Filial', width: '220px', render: v => <span className="bold-text text-highlight">{v}</span> },
       { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
       { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta', align: 'right', width: '130px', type: 'progress' },
-      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
+      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
       { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
     ];
@@ -154,9 +151,8 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
     { key: 'nome', label: 'Grupo / Categoria', width: '220px', render: v => <span className="bold-text">{v}</span> },
     { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
     { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-    { key: 'meta_total', label: 'Meta', align: 'right', render: v => formatK(v) },
-    { key: 'pct_meta_total', label: '% Meta', align: 'right', width: '130px', type: 'progress' },
-    { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+    { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
+    { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
     { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
     { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
   ];
@@ -165,9 +161,8 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
     { key: 'nome', label: 'Linha de Produto', width: '240px', render: v => <span className="bold-text">{v}</span> },
     { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
     { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-    { key: 'meta_total', label: 'Meta', align: 'right', render: v => formatK(v) },
-    { key: 'pct_meta_total', label: '% Meta', align: 'right', width: '130px', type: 'progress' },
-    { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+    { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
+    { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
     { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
     { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
   ];
@@ -246,15 +241,15 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
       <div className="dashboard-story-section">
         <div className="story-group-header">
           <div className="story-title-wrap">
-            <span className="story-badge ecommerce">CANAIS</span>
-            <h2>Resumo E-commerce ({data?.label_mes_atual || 'Jul/26'})</h2>
+            <span className="story-badge ecommerce">DESEMPENHO</span>
+            <h2>Resumo Vendas & Metas ({data?.label_mes_atual || 'Jul/26'})</h2>
           </div>
-          <span className="story-context-desc">Desempenho financeiro e metas do canal digital</span>
+          <span className="story-context-desc">Desempenho consolidado de vendas, atingimento e metas</span>
         </div>
 
         <div className="kpi-grid">
           <KPICard 
-            title="Venda E-commerce" 
+            title="Venda Total (Física + Digital)" 
             value={formatK(t.venda_jul26)}
             sub={formatK(t.meta_total)} 
             subLabel="Meta Total:"
@@ -265,22 +260,22 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
             icon={ShoppingCart} 
           />
           <KPICard 
-            title="Atingimento Meta Parcial" 
-            value={`${(t.pct_meta_parcial || 0).toFixed(1)}%`}
-            sub={formatK(t.meta_parcial)} 
-            subLabel="Meta Parcial:"
-            color={(t.pct_meta_parcial || 0) >= 90 ? SUCCESS : (t.pct_meta_parcial || 0) >= 60 ? WARNING : DANGER}
+            title="Atingimento Meta Total" 
+            value={`${(t.pct_meta_total || 0).toFixed(1)}%`}
+            sub={formatK(t.meta_total)} 
+            subLabel="Meta Total:"
+            color={(t.pct_meta_total || 0) >= 90 ? SUCCESS : (t.pct_meta_total || 0) >= 60 ? WARNING : DANGER}
             loading={loading} 
             icon={Target} 
           />
           <KPICard 
-            title="Desvio Meta Parcial" 
-            value={t.venda_jul26 != null && t.meta_parcial != null ? `${(t.venda_jul26 - t.meta_parcial) >= 0 ? '+' : ''}${formatK(t.venda_jul26 - t.meta_parcial)}` : '—'}
-            trend={t.meta_parcial ? ((t.venda_jul26 - t.meta_parcial) / t.meta_parcial) * 100 : undefined}
+            title="Desvio Meta Total" 
+            value={t.venda_jul26 != null && t.meta_total != null ? `${(t.venda_jul26 - t.meta_total) >= 0 ? '+' : ''}${formatK(t.venda_jul26 - t.meta_total)}` : '—'}
+            trend={t.meta_total ? ((t.venda_jul26 - t.meta_total) / t.meta_total) * 100 : undefined}
             trendLabel="desvio"
-            color={t.venda_jul26 >= t.meta_parcial ? SUCCESS : DANGER}
+            color={t.venda_jul26 >= t.meta_total ? SUCCESS : DANGER}
             loading={loading}
-            icon={t.venda_jul26 >= t.meta_parcial ? TrendingUp : TrendingDown}
+            icon={t.venda_jul26 >= t.meta_total ? TrendingUp : TrendingDown}
           />
           <KPICard 
             title="Evolução YoY" 
@@ -299,37 +294,6 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
             color={t.evol_mom >= 0 ? SUCCESS : DANGER}
             loading={loading} 
             icon={t.evol_mom >= 0 ? TrendingUp : TrendingDown} 
-          />
-        </div>
-
-        <div className="story-group-header" style={{ marginTop: '24px' }}>
-          <div className="story-title-wrap">
-            <span className="story-badge rede">MARKET SHARE</span>
-            <h2>Participação na Rede (Base Empresa)</h2>
-          </div>
-          <span className="story-context-desc">Quanto o e-commerce representa das vendas globais das lojas físicas</span>
-        </div>
-
-        <div className="kpi-grid part-grid">
-          <KPICard 
-            title="Venda Total da Rede" 
-            value={formatK(t.base_emp_jul26)}
-            sub={`${labelMesAtualAnoAnt}: ${formatK(t.base_emp_jul25)}`} 
-            subLabel={`Rede ${labelMesAtualAnoAnt}:`}
-            color={ACCENT_ALT}
-            loading={loading} 
-            icon={DollarSign} 
-          />
-          <KPICard 
-            title="Participação E-commerce" 
-            value={`${(t.pct_ecomm_jul26 || 0).toFixed(1)}%`}
-            sub={`${labelMesAtualAnoAnt}: ${(t.pct_ecomm_jul25 || 0).toFixed(1)}%`} 
-            subLabel={`Part. ${labelMesAtualAnoAnt}:`}
-            trend={(t.pct_ecomm_jul26 || 0) - (t.pct_ecomm_jul25 || 0)} 
-            trendLabel={`p.p. vs ${labelMesAtualAnoAnt}`}
-            color={WARNING}
-            loading={loading} 
-            icon={PieChart} 
           />
         </div>
       </div>

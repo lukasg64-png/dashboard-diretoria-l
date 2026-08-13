@@ -1,3872 +1,3512 @@
 {
-  "Alvorada 1": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Alvorada",
+  "Frederico 1": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Frederico",
     "uf": "RS"
   },
-  "Alvorada 2": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Alvorada",
+  "Frederico 2": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Frederico",
     "uf": "RS"
   },
-  "Alvorada 7": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Alvorada",
+  "Frederico 3": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Frederico",
     "uf": "RS"
   },
-  "Alvorada 9": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Alvorada",
+  "Frederico 4": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Frederico",
     "uf": "RS"
   },
-  "Alvorada 10": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Alvorada",
+  "Horizontina 1": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Horizontina",
     "uf": "RS"
   },
-  "Antonio Prado": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Antonio Prado",
+  "Horizontina 2": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Horizontina",
     "uf": "RS"
   },
-  "Araquari": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Araquari",
+  "Nonoai": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Nonoai",
     "uf": "RS"
   },
-  "Ararangua - Nova": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Ararangua - Nova",
+  "Planalto": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Planalto",
     "uf": "RS"
   },
-  "Arroio do Sal 1": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Arroio do Sal",
+  "Ronda Alta": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ronda Alta",
     "uf": "RS"
   },
-  "Arroio do Sal 2": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Arroio do Sal",
+  "Sarandi 1": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Arroio dos Ratos": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Arroio dos Ratos",
+  "Sarandi 2": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Bal. Arroio do Silva": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Arroio do Silva",
+  "Sarandi 3": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Bal. Camboriu 1": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Camboriu",
+  "Seberi": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Seberi",
     "uf": "RS"
   },
-  "Bal. Camboriu 2": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Camboriu",
+  "Tenente Portela": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tenente Portela",
     "uf": "RS"
   },
-  "Bal. Camboriu 3": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Camboriu",
+  "Tres De Maio 1": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres De Maio",
     "uf": "RS"
   },
-  "Bal. Camboriu 4": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Camboriu",
+  "Tres De Maio 2": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres De Maio",
     "uf": "RS"
   },
-  "Bal. Camboriu 5": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bal. Camboriu",
+  "Tres de Maio 3": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres de Maio",
     "uf": "RS"
   },
-  "Balneario Gaivota": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Balneario Gaivota",
+  "Tres de Maio 4": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres de Maio",
     "uf": "RS"
   },
-  "Balneario Picarras": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Balneario Picarras",
+  "Tres Passos 1": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres Passos",
     "uf": "RS"
   },
-  "Balneario Pinhal": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Balneario Pinhal",
+  "Tres Passos 2": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres Passos",
     "uf": "RS"
   },
-  "Balneario Rincao": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Balneario Rincao",
+  "Tres Passos 3": {
+    "coordenador": "Aran De Juli Trainee",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tres Passos",
     "uf": "RS"
   },
-  "Barra do Ribeiro": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Barra do Ribeiro",
+  "Carazinho 1": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Barra Velha": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Barra Velha",
+  "Carazinho 2": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 1": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Carazinho 4": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 2": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Carazinho 6": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 3": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Carazinho 7": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 4": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Carazinho 8": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 5": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Carazinho 9": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Carazinho",
     "uf": "RS"
   },
-  "Bento Goncalves 6": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Chapada": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapada",
     "uf": "RS"
   },
-  "Bento Goncalves 7": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Nao Me Toque 1": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Nao Me Toque",
     "uf": "RS"
   },
-  "Bento Goncalves 8": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "Nao Me Toque 2": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "Nao Me Toque",
     "uf": "RS"
   },
-  "Bento Goncalves 10": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Boqueirao 1": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Boqueirao",
     "uf": "RS"
   },
-  "Bento Goncalves 11": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Boqueirao 2": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Boqueirao",
     "uf": "RS"
   },
-  "Bento Goncalves 12": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Boqueirao 3": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Boqueirao",
     "uf": "RS"
   },
-  "Bento Goncalves 13": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Paissandu": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Paissandu",
     "uf": "RS"
   },
-  "Bento Goncalves 14": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Santa Marta": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Santa Marta",
     "uf": "RS"
   },
-  "Bento Goncalves 15": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bento Goncalves",
+  "PF - Sao Jose": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Sao Jose",
     "uf": "RS"
   },
-  "Biguacu": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Biguacu",
+  "PF - Teixeira 1": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Teixeira",
     "uf": "RS"
   },
-  "Blumenau 1": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Teixeira 3": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Teixeira",
     "uf": "RS"
   },
-  "Blumenau 2": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Vera Cruz 1": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Vera Cruz",
     "uf": "RS"
   },
-  "Blumenau 3": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Vera Cruz 2": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Vera Cruz",
     "uf": "RS"
   },
-  "Blumenau 4": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Vera Cruz 3": {
+    "coordenador": "Camila May",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Vera Cruz",
     "uf": "RS"
   },
-  "Blumenau 5": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Bento 2": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Bento",
     "uf": "RS"
   },
-  "Blumenau 6": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Blumenau",
+  "PF - Cap. Eleuterio": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Cap. Eleuterio",
     "uf": "RS"
   },
-  "Bom Jesus": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Bom Jesus",
+  "PF - Cidade Nova NOVA": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Cidade Nova NOVA",
     "uf": "RS"
   },
-  "Bom Princípio": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Bom Princípio",
+  "PF - Dez de Abril": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Dez de Abril",
     "uf": "RS"
   },
-  "Bombinhas": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Bombinhas",
+  "PF - Fagundes": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Fagundes",
     "uf": "RS"
   },
-  "Braco do Norte 1": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Braco do Norte",
+  "PF - General Canabarro": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - General Canabarro",
     "uf": "RS"
   },
-  "Braco do Norte 2": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Braco do Norte",
+  "PF - General Neto": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - General Neto",
     "uf": "RS"
   },
-  "Brusque 1": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Brusque",
+  "PF - Loja Modelo": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Loja Modelo",
     "uf": "RS"
   },
-  "Brusque 2": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Brusque",
+  "PF - Matriz": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Matriz",
     "uf": "RS"
   },
-  "Brusque 3": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Brusque",
+  "PF - Notre Dame": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Notre Dame",
     "uf": "RS"
   },
-  "Brusque 4": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Brusque",
+  "PF - Petropolis": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Petropolis",
     "uf": "RS"
   },
-  "Butia 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Butia",
+  "PF - Rodoviaria": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Rodoviaria",
     "uf": "RS"
   },
-  "Butia 2": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Butia",
+  "PF - Santa Maria": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Santa Maria",
     "uf": "RS"
   },
-  "Cachoeirinha 1": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Sao Cristovao 1": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Sao Cristovao",
     "uf": "RS"
   },
-  "Cachoeirinha 2": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Sao Cristovao 2": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Sao Cristovao",
     "uf": "RS"
   },
-  "Cachoeirinha 3 - Nova": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Sao Cristovao 3": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Sao Cristovao",
     "uf": "RS"
   },
-  "Cachoeirinha 4": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Shopping": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Shopping",
     "uf": "RS"
   },
-  "Cachoeirinha 5": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Shopping S.Crist": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Shopping S.Crist",
     "uf": "RS"
   },
-  "Cachoeirinha 6": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - UNA": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - UNA",
     "uf": "RS"
   },
-  "Cachoeirinha 7": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Uruguai": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Uruguai",
     "uf": "RS"
   },
-  "Cachoeirinha 8": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Uruguai 2": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Uruguai",
     "uf": "RS"
   },
-  "Cachoeirinha 9": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "PF - Zachia": {
+    "coordenador": "Fabiane Leite",
+    "distrital": "Fais Abdalla",
+    "municipio": "PF - Zachia",
     "uf": "RS"
   },
-  "Cachoeirinha 10": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Cachoeirinha",
+  "Erechim 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Erechim",
     "uf": "RS"
   },
-  "Camaqua 1": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Erechim 2": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Erechim",
     "uf": "RS"
   },
-  "Camaqua 2": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Erechim 3": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Erechim",
     "uf": "RS"
   },
-  "Camaqua 3": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Erechim 4": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Erechim",
     "uf": "RS"
   },
-  "Camaqua 4": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Erechim 5": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Erechim",
     "uf": "RS"
   },
-  "Camaqua 5": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Getulio Vargas 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Getulio Vargas",
     "uf": "RS"
   },
-  "Camaqua 7": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Camaqua",
+  "Getulio Vargas 2": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Getulio Vargas",
     "uf": "RS"
   },
-  "Camboriu 1": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Camboriu",
+  "Lagoa Vermelha 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Lagoa Vermelha",
     "uf": "RS"
   },
-  "Camboriu 2": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Camboriu",
+  "Lagoa Vermelha 2": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Lagoa Vermelha",
     "uf": "RS"
   },
-  "Camboriu 3": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Camboriu",
+  "Marau 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Marau",
     "uf": "RS"
   },
-  "Camboriu 4": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Camboriu",
+  "Marau 3": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Marau",
     "uf": "RS"
   },
-  "Camboriu 5": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Camboriu",
+  "Marau 4": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Marau",
     "uf": "RS"
   },
-  "Campo Bom 1": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Campo Bom",
+  "Marau 5": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Marau",
     "uf": "RS"
   },
-  "Campo Bom 2": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Campo Bom",
+  "Marau 6": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Marau",
     "uf": "RS"
   },
-  "Campo Bom 3": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Campo Bom",
+  "Sananduva 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sananduva",
     "uf": "RS"
   },
-  "Campo Bom 4": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Campo Bom",
+  "Sananduva 2": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sananduva",
     "uf": "RS"
   },
-  "Canela 1": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Canela",
+  "Tapejara 1": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tapejara",
     "uf": "RS"
   },
-  "Canela 2": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Canela",
+  "Tapejara 2": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tapejara",
     "uf": "RS"
   },
-  "Canela 3": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Canela",
+  "Tapejara 3": {
+    "coordenador": "Gessica Perin",
+    "distrital": "Fais Abdalla",
+    "municipio": "Tapejara",
     "uf": "RS"
   },
-  "Canela 4": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Canela",
+  "Condor": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Condor",
     "uf": "RS"
   },
-  "Canela 5": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Canela",
+  "Ijui 1": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 1": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 2": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 2": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 3": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 3 - Nova": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 4": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 4": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 5": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 5": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 6": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 6": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 7": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 7 - Nova": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 8": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 8": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 9": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 9 - Hosp": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Ijui 10": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Ijui",
     "uf": "RS"
   },
-  "Canoas 10": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Palmeira 1": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Palmeira",
     "uf": "RS"
   },
-  "Canoas 11 - Shop": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Palmeira 2": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Palmeira",
     "uf": "RS"
   },
-  "Canoas 12": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Palmeira 3": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Palmeira",
     "uf": "RS"
   },
-  "Canoas 13": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Panambi 1": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Panambi",
     "uf": "RS"
   },
-  "Canoas 14": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Panambi 2": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Panambi",
     "uf": "RS"
   },
-  "Canoas 15": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Panambi 3": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Panambi",
     "uf": "RS"
   },
-  "Canoas 17": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Panambi 4": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Panambi",
     "uf": "RS"
   },
-  "Canoas 20": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Panambi 5": {
+    "coordenador": "Giovani Sisti",
+    "distrital": "Fais Abdalla",
+    "municipio": "Panambi",
     "uf": "RS"
   },
-  "Canoas 21": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 2": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 22 - Stock": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 3": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 23": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 4": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 24": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 5": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 25": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 6": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 26": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 8": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 27": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Chapeco 9": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Chapeco",
     "uf": "RS"
   },
-  "Canoas 30": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Concordia 1": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Concordia",
     "uf": "RS"
   },
-  "Canoas 31": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Concordia 2": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Concordia",
     "uf": "RS"
   },
-  "Canoas 32": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Concordia 3": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Concordia",
     "uf": "RS"
   },
-  "Canoas 33": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Dionisio Cerqueira": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Dionisio Cerqueira",
     "uf": "RS"
   },
-  "Canoas 34": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Itapiranga": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Itapiranga",
     "uf": "RS"
   },
-  "Canoas 36": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Maravilha 1": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Maravilha",
     "uf": "RS"
   },
-  "Canoas 37": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Maravilha 2": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Maravilha",
     "uf": "RS"
   },
-  "Canoas 39": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "Pinhalzinho": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Pinhalzinho",
     "uf": "RS"
   },
-  "Canoas 40": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Canoas",
+  "São Lourenço do Oeste": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "São Lourenço do Oeste",
     "uf": "RS"
   },
-  "Capao Da Canoa 1": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Sao Miguel do Oeste": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Sao Miguel do Oeste",
     "uf": "RS"
   },
-  "Capao Da Canoa 2": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Seara": {
+    "coordenador": "Priscila Machado",
+    "distrital": "Fais Abdalla",
+    "municipio": "Seara",
     "uf": "RS"
   },
-  "Capao Da Canoa 4": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Cacador 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Cacador",
     "uf": "RS"
   },
-  "Capao Da Canoa 6": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Cacador 2": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Cacador",
     "uf": "RS"
   },
-  "Capao Da Canoa 8": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Cacador 3": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Cacador",
     "uf": "RS"
   },
-  "Capao Da Canoa 9": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Campos Novos 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Campos Novos",
     "uf": "RS"
   },
-  "Capao Da Canoa 10": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Campos Novos 2": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Campos Novos",
     "uf": "RS"
   },
-  "Capao Da Canoa 11": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Canoinhas 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Canoinhas",
     "uf": "RS"
   },
-  "Capao Da Canoa 12": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao Da Canoa",
+  "Canoinhas 2": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Canoinhas",
     "uf": "RS"
   },
-  "Capao da Canoa 13": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Capao da Canoa",
+  "Capinzal": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Capinzal",
     "uf": "RS"
   },
-  "Capela de Santana": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Capela de Santana",
+  "Herval D' Oeste 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Herval D' Oeste",
     "uf": "RS"
   },
-  "Capivari de Baixo": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Capivari de Baixo",
+  "Herval D' Oeste 2": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Herval D' Oeste",
     "uf": "RS"
   },
-  "Carlos Barbosa 1": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Carlos Barbosa",
+  "Herval D'Oeste 3": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Herval D'Oeste",
     "uf": "RS"
   },
-  "Carlos Barbosa 2": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Carlos Barbosa",
+  "Joacaba 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Joacaba",
     "uf": "RS"
   },
-  "Carlos Barbosa 3": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Carlos Barbosa",
+  "Joacaba 3": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Joacaba",
     "uf": "RS"
   },
-  "Carlos Barbosa 4": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Carlos Barbosa",
+  "Porto União": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Porto União",
     "uf": "RS"
   },
-  "Caxias 1": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Videira 1": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Videira",
     "uf": "RS"
   },
-  "Caxias 2": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Videira 2": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Videira",
     "uf": "RS"
   },
-  "Caxias 3": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Videira 3": {
+    "coordenador": "Samantha Lima",
+    "distrital": "Fais Abdalla",
+    "municipio": "Videira",
     "uf": "RS"
   },
-  "Caxias 4": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 1": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 5": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 2": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 6": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 3": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 7": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 5": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 8": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 6": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 9": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Alegrete 7": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Alegrete",
     "uf": "RS"
   },
-  "Caxias 11 - Shop": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Cacequi": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cacequi",
     "uf": "RS"
   },
-  "Caxias 12": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Jaguari": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Jaguari",
     "uf": "RS"
   },
-  "Caxias 13": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Rosario do Sul 1": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rosario do Sul",
     "uf": "RS"
   },
-  "Caxias 15": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Rosario do Sul 2": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rosario do Sul",
     "uf": "RS"
   },
-  "Caxias 16": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "S. Francisco Assis": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "S. Francisco Assis",
     "uf": "RS"
   },
-  "Caxias 17": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Santiago 1": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santiago",
     "uf": "RS"
   },
-  "Caxias 18": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Santiago 2": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santiago",
     "uf": "RS"
   },
-  "Caxias 19": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Santiago 3": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santiago",
     "uf": "RS"
   },
-  "Caxias 20": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Santiago 4": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santiago",
     "uf": "RS"
   },
-  "Caxias 22": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Santiago 5": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santiago",
     "uf": "RS"
   },
-  "Caxias 23": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Sao Gabriel 1": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Gabriel",
     "uf": "RS"
   },
-  "Caxias 24": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Sao Gabriel 2": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Gabriel",
     "uf": "RS"
   },
-  "Caxias 25": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Sao Gabriel 3": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Gabriel",
     "uf": "RS"
   },
-  "Caxias 27": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Sao Gabriel 4": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Gabriel",
     "uf": "RS"
   },
-  "Caxias 30": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "São Gabriel 5": {
+    "coordenador": "Andressa Biasi",
+    "distrital": "Juliano Petrarca",
+    "municipio": "São Gabriel",
     "uf": "RS"
   },
-  "Caxias 31": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 1": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 32": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 2": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 34": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 3": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 35": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 4": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 37 - Gal": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 5": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 38 - Nova": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 6": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 39": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 7 - Nova": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 40": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 9": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 41": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 11": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 42": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 12": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 43": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 15": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 46": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 16": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 47 - Nova": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 18": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 48": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 20": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 50": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 21": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 52": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 23": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 53 - Stock": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 27 - Stock": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 54": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 29": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 55": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 30": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 56": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 31": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 57": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 32": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 58": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 33": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 59": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pelotas 34": {
+    "coordenador": "Aron Monteiro",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pelotas",
     "uf": "RS"
   },
-  "Caxias 60": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Arroio Grande 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Arroio Grande",
     "uf": "RS"
   },
-  "Caxias 63": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Arroio Grande 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Arroio Grande",
     "uf": "RS"
   },
-  "Caxias 64": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Candiota": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Candiota",
     "uf": "RS"
   },
-  "Caxias 65": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Cangucu 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cangucu",
     "uf": "RS"
   },
-  "Caxias 66": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Cangucu 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cangucu",
     "uf": "RS"
   },
-  "Caxias 67": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Cangucu 3": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cangucu",
     "uf": "RS"
   },
-  "Caxias 68": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Cangucu 4": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cangucu",
     "uf": "RS"
   },
-  "Caxias 69": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Chui": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Chui",
     "uf": "RS"
   },
-  "Caxias 70": {
-    "coordenador": "James Rodrigues",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Encruzilhada Do Sul 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Encruzilhada Do Sul",
     "uf": "RS"
   },
-  "Caxias 71": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Encruzilhada Do Sul 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Encruzilhada Do Sul",
     "uf": "RS"
   },
-  "Caxias 72": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Jaguarao 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Jaguarao",
     "uf": "RS"
   },
-  "Caxias 74": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Jaguarao 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Jaguarao",
     "uf": "RS"
   },
-  "Caxias 75": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Pinheiro Machado": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Pinheiro Machado",
     "uf": "RS"
   },
-  "Caxias 76 - Nova": {
-    "coordenador": "Rafael Constante",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Caxias",
+  "Piratini 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Piratini",
     "uf": "RS"
   },
-  "Cerro Grande": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Cerro Grande",
+  "Piratini 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Piratini",
     "uf": "RS"
   },
-  "Charqueadas 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Charqueadas",
+  "Sao Lourenco 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Lourenco",
     "uf": "RS"
   },
-  "Charqueadas 2 - Nova": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Charqueadas",
+  "Sao Lourenco 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Lourenco",
     "uf": "RS"
   },
-  "Cidreira - Nova": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Cidreira - Nova",
+  "Sao Lourenco 3": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Lourenco",
     "uf": "RS"
   },
-  "Cocal do Sul": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Cocal do Sul",
+  "Sta. Vitoria Palmar 1": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sta. Vitoria Palmar",
     "uf": "RS"
   },
-  "Correia Pinto": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Correia Pinto",
+  "Sta. Vitoria Palmar 2": {
+    "coordenador": "Dieisson Tondo",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sta. Vitoria Palmar",
     "uf": "RS"
   },
-  "Criciuma 1": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Mostardas": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Mostardas",
     "uf": "RS"
   },
-  "Criciuma 3": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 1": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Criciuma 4": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 2": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Criciuma 5": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 3": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Criciuma 6": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 4": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Criciuma 7": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 5": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Criciuma 8": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Criciuma",
+  "Rio Grande 6": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Dois Irmaos 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Dois Irmaos",
+  "Rio Grande 7": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Dois Irmaos 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Dois Irmaos",
+  "Rio Grande 9": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Dom Feliciano": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Dom Feliciano",
+  "Rio Grande 10": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Eldorado Do Sul 1": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Eldorado Do Sul",
+  "Rio Grande 11": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Eldorado do Sul 2": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Eldorado do Sul",
+  "Rio Grande 13": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Eldorado do Sul 3": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Eldorado do Sul",
+  "Rio Grande 14": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Estancia Velha 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Rio Grande 15": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Estancia Velha 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Rio Grande 16": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Estancia Velha 3": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Rio Grande 17": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Estancia Velha 5": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Rio Grande 19": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Rio Grande",
     "uf": "RS"
   },
-  "Estancia Velha 6": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "S. Jose Do Norte 1": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "S. Jose Do Norte",
     "uf": "RS"
   },
-  "Estancia Velha 7": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "S. Jose Do Norte 2": {
+    "coordenador": "Diene Soares",
+    "distrital": "Juliano Petrarca",
+    "municipio": "S. Jose Do Norte",
     "uf": "RS"
   },
-  "Estancia Velha 8": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Cerro Largo": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Cerro Largo",
     "uf": "RS"
   },
-  "Estancia Velha 9": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Estancia Velha",
+  "Entre Ijuis": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Entre Ijuis",
     "uf": "RS"
   },
-  "Esteio 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Girua 1": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Girua",
     "uf": "RS"
   },
-  "Esteio 2": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Girua 2": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Girua",
     "uf": "RS"
   },
-  "Esteio 3": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Porto Xavier": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Porto Xavier",
     "uf": "RS"
   },
-  "Esteio 4": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Santa Rosa 1": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Esteio 5": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Santa Rosa 2": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Esteio 6": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Santa Rosa 4": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Esteio 7": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Santa Rosa 5": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Esteio 9": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Esteio",
+  "Santa Rosa 6": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Farroupilha 1": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santa Rosa 7": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santa Rosa",
     "uf": "RS"
   },
-  "Farroupilha 2": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santo Angelo 1": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Farroupilha 3": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santo Angelo 2": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Farroupilha 5": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santo Angelo 3": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Farroupilha 6": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santo Angelo 4": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Farroupilha 7": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Farroupilha",
+  "Santo Angelo 5": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Feliz": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Feliz",
+  "Santo Angelo 7": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Flores Da Cunha 1": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Flores Da Cunha",
+  "Santo Angelo 8": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Flores Da Cunha 2": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Flores Da Cunha",
+  "Santo Angelo 9": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Angelo",
     "uf": "RS"
   },
-  "Flores Da Cunha 3": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Flores Da Cunha",
+  "Santo Antonio das Missoes Nova": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Antonio das Missoes Nova",
     "uf": "RS"
   },
-  "Flores Da Cunha 4": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Flores Da Cunha",
+  "Santo Cristo - Nova": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Santo Cristo - Nova",
     "uf": "RS"
   },
-  "Flores Da Cunha 5": {
-    "coordenador": "Taline Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Flores Da Cunha",
+  "Sao Luiz Gonzaga 1": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Luiz Gonzaga",
     "uf": "RS"
   },
-  "Florianopolis 1": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Sao Luiz Gonzaga 2": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Luiz Gonzaga",
     "uf": "RS"
   },
-  "Florianopolis 2": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Sao Luiz Gonzaga 3": {
+    "coordenador": "Everton Elegda",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Luiz Gonzaga",
     "uf": "RS"
   },
-  "Florianopolis 5": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Acegua": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Acegua",
     "uf": "RS"
   },
-  "Florianopolis 6": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 1": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 7": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 2": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 9": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 3": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 10": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 4": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 11": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 5": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 12": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Bage 6": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Bage",
     "uf": "RS"
   },
-  "Florianopolis 13": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Dom Pedrito 1": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Dom Pedrito",
     "uf": "RS"
   },
-  "Florianopolis 14": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Dom Pedrito 2": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Dom Pedrito",
     "uf": "RS"
   },
-  "Florianopolis 15": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 1": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 16": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 2": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 17": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 3": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 18": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 4": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 20": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 6": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 21": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 7": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Florianopolis 22": {
-    "coordenador": "Taise Frigo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Florianopolis",
+  "Livramento 8": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Garibaldi 1": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Garibaldi",
+  "Livramento 9": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Garibaldi 2": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Garibaldi",
+  "Livramento 10": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Garibaldi 3": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Garibaldi",
+  "Livramento 11": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Garibaldi 4": {
-    "coordenador": "Taise Corso",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Garibaldi",
+  "Livramento 12": {
+    "coordenador": "Marcio Pruciano",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Livramento",
     "uf": "RS"
   },
-  "Garopaba 1": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Garopaba",
+  "Barra do Quarai 1": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Barra do Quarai",
     "uf": "RS"
   },
-  "Garopaba 2 - Nova": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Garopaba",
+  "Itaqui 1": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Itaqui",
     "uf": "RS"
   },
-  "Garuva": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Garuva",
+  "Itaqui 2": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Itaqui",
     "uf": "RS"
   },
-  "Glorinha": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Glorinha",
+  "Quarai 1": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Quarai",
     "uf": "RS"
   },
-  "Gramado 1": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Quarai 2": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Quarai",
     "uf": "RS"
   },
-  "Gramado 2": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Sao Borja 1": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gramado 3": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Sao Borja 2": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gramado 4": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Sao Borja 3": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gramado 5": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Sao Borja 4": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gramado 6": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Gramado",
+  "Sao Borja 5": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gravatai 1": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Sao Borja 6": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gravatai 2": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Sao Borja 7": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Sao Borja",
     "uf": "RS"
   },
-  "Gravatai 3": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 1": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 4": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 2": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 5 - Nova": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 3": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 6": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 4": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 7": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 5": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 8": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 6": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 9": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 7": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 12": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 8": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 13 - Stock": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 9": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 14": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 12": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 16": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 13": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 17": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Uruguaiana 14": {
+    "coordenador": "Rafael Mendes",
+    "distrital": "Juliano Petrarca",
+    "municipio": "Uruguaiana",
     "uf": "RS"
   },
-  "Gravatai 18": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Assis Chateaubriand 1": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Assis Chateaubriand",
     "uf": "RS"
   },
-  "Gravatai 19": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Assis Chateaubriand 2": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Assis Chateaubriand",
     "uf": "RS"
   },
-  "Gravatai 20": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai",
+  "Foz do Iguacu 1": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Gravatai Modelo": {
-    "coordenador": "Bruna Rodrigues",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Gravatai Modelo",
+  "Foz do Iguacu 2": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guabiruba": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Guabiruba",
+  "Foz do Iguacu 3": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 1": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 4": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 2": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 5": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 3": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 6": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 4": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 7": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 5": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 8": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 6": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 9": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 7": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Foz do Iguacu 10": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Foz do Iguacu",
     "uf": "RS"
   },
-  "Guaiba 9": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Marechal Candido Rondon 1": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Marechal Candido Rondon",
     "uf": "RS"
   },
-  "Guaiba 10": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Santa Helena": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Santa Helena",
     "uf": "RS"
   },
-  "Guaiba 12": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "São Miguel do Iguaçu": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "São Miguel do Iguaçu",
     "uf": "RS"
   },
-  "Guaiba 13": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Sta Terezinha do Itaipu": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Sta Terezinha do Itaipu",
     "uf": "RS"
   },
-  "Guaiba 14": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Guaiba",
+  "Toledo 1": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Toledo",
     "uf": "RS"
   },
-  "Guaramirim 1": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Guaramirim",
+  "Toledo 2": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Toledo",
     "uf": "RS"
   },
-  "Guaramirim 2": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Guaramirim",
+  "Toledo 3": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Toledo",
     "uf": "RS"
   },
-  "Ibirama": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Ibirama",
+  "Toledo 4": {
+    "coordenador": "Adriceli Clemente",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Toledo",
     "uf": "RS"
   },
-  "Içara 1": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Içara",
+  "Apucarana 1": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Igrejinha 1": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Igrejinha",
+  "Apucarana 2": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Igrejinha 2": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Igrejinha",
+  "Apucarana 3": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Igrejinha 3": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Igrejinha",
+  "Apucarana 4": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Igrejinha 4": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Igrejinha",
+  "Apucarana 5": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Ilhota": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Ilhota",
+  "Apucarana 6": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Apucarana",
     "uf": "RS"
   },
-  "Imbe 1": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Imbe",
+  "Arapongas 1": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Arapongas",
     "uf": "RS"
   },
-  "Imbe 2": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Imbe",
+  "Arapongas 2": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Arapongas",
     "uf": "RS"
   },
-  "Imbe 3": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Imbe",
+  "Arapongas 3": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Arapongas",
     "uf": "RS"
   },
-  "Imbe 4": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Imbe",
+  "Arapongas 4": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Arapongas",
     "uf": "RS"
   },
-  "Indaial 1": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Indaial",
+  "Bela Vista do Paraiso": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Bela Vista do Paraiso",
     "uf": "RS"
   },
-  "Ipê": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Ipê",
+  "Cambara": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cambara",
     "uf": "RS"
   },
-  "Itajaí 1": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Cornelio Procopio 1": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cornelio Procopio",
     "uf": "RS"
   },
-  "Itajaí 2": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Faxinal": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Faxinal",
     "uf": "RS"
   },
-  "Itajaí 3": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Jacarezinho": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Jacarezinho",
     "uf": "RS"
   },
-  "Itajaí 4": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Mandaguari": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Mandaguari",
     "uf": "RS"
   },
-  "Itajaí 5": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Rolandia 1": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Rolandia",
     "uf": "RS"
   },
-  "Itajaí 6": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Rolandia 2": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Rolandia",
     "uf": "RS"
   },
-  "Itajaí 7": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Sertanopolis": {
+    "coordenador": "Alex Delfim",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Sertanopolis",
     "uf": "RS"
   },
-  "Itajaí 8": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itajaí",
+  "Cambé 1": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cambé",
     "uf": "RS"
   },
-  "Itapema 1": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapema",
+  "Cambé 2": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cambé",
     "uf": "RS"
   },
-  "Itapema 2 - Nova": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapema",
+  "Cambé 3": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cambé",
     "uf": "RS"
   },
-  "Itapema 3": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapema",
+  "Cambé 4": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cambé",
     "uf": "RS"
   },
-  "Itapema 4": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapema",
+  "Londrina 1": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Itapema 5 - Nova": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapema",
+  "Londrina 2": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Itapoa": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Itapoa",
+  "Londrina 3": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Ivoti 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Ivoti",
+  "Londrina 4": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Ivoti 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Ivoti",
+  "Londrina 5": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Jaguaruna": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Jaguaruna",
+  "Londrina 6": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Jaragua do Sul 1": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Jaragua do Sul",
+  "Londrina 7": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Jaragua do Sul 2": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Jaragua do Sul",
+  "Londrina 8": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Jaragua do Sul 3": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Jaragua do Sul",
+  "Londrina 10": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Joinville 2": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Joinville",
+  "Londrina 11": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Joinville 3": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Joinville",
+  "Londrina 12": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Joinville 4": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Joinville",
+  "Londrina 13": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Joinville 5": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Joinville",
+  "Londrina 15": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Lages 3": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Lages",
+  "Londrina 17": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Lages 4": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Lages",
+  "Londrina 19": {
+    "coordenador": "Alyne Kobayashi",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Londrina",
     "uf": "RS"
   },
-  "Lages 5": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Lages",
+  "Arapoti": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Arapoti",
     "uf": "RS"
   },
-  "Lages 6": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Lages",
+  "Araucária": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Araucária",
     "uf": "RS"
   },
-  "Laguna": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Laguna",
+  "Curitiba 2": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Curitiba",
     "uf": "RS"
   },
-  "Lontras 1": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Lontras",
+  "Curitiba 3": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Curitiba",
     "uf": "RS"
   },
-  "Luiz Alves": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Luiz Alves",
+  "Curitiba 5": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Curitiba",
     "uf": "RS"
   },
-  "Mafra": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Mafra",
+  "Curitiba 6": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Curitiba",
     "uf": "RS"
   },
-  "Montenegro 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Fazenda Rio Grande": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Fazenda Rio Grande",
     "uf": "RS"
   },
-  "Montenegro 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Guarapuava 1": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Guarapuava",
     "uf": "RS"
   },
-  "Montenegro 3": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Guarapuava 2": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Guarapuava",
     "uf": "RS"
   },
-  "Montenegro 4": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Guarapuava 3": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Guarapuava",
     "uf": "RS"
   },
-  "Montenegro 5": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Imbituva": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Imbituva",
     "uf": "RS"
   },
-  "Montenegro 6": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Laranjeiras do Sul": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Laranjeiras do Sul",
     "uf": "RS"
   },
-  "Montenegro 7": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Montenegro",
+  "Palmeira - PR": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Palmeira - PR",
     "uf": "RS"
   },
-  "Morro da Fumaca": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Morro da Fumaca",
+  "Pinhais": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Pinhais",
     "uf": "RS"
   },
-  "Navegantes 1": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Navegantes",
+  "Pinhao": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Pinhao",
     "uf": "RS"
   },
-  "Navegantes 3": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Navegantes",
+  "Pirai do sul": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Pirai do sul",
     "uf": "RS"
   },
-  "Navegantes 4": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Navegantes",
+  "Prudentopolis": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Prudentopolis",
     "uf": "RS"
   },
-  "Navegantes 5": {
-    "coordenador": "Luana Campagnolo",
-    "distrital": "Cleiton Lima",
-    "municipio": "Navegantes",
+  "Quitandinha": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Quitandinha",
     "uf": "RS"
   },
-  "Nova Bassano": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Nova Bassano",
+  "Reserva": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Reserva",
     "uf": "RS"
   },
-  "Nova Hartz": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Nova Hartz",
+  "São Mateus do Sul": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "São Mateus do Sul",
     "uf": "RS"
   },
-  "Nova Petropolis 1": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Nova Petropolis",
+  "União da Vitória": {
+    "coordenador": "Fernanda Charneski Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "União da Vitória",
     "uf": "RS"
   },
-  "Nova Petropolis 2": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Nova Petropolis",
+  "Jandaia do Sul 1": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Jandaia do Sul",
     "uf": "RS"
   },
-  "Nova Prata 1": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Nova Prata",
+  "Jandaia do Sul 2": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Jandaia do Sul",
     "uf": "RS"
   },
-  "Nova Prata 3": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Nova Prata",
+  "Marialva 1": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Marialva",
     "uf": "RS"
   },
-  "Nova Santa Rita 1": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Nova Santa Rita",
+  "Marialva 2": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Marialva",
     "uf": "RS"
   },
-  "Nova Santa Rita 2": {
-    "coordenador": "Cledison Silva",
-    "distrital": "Andre Jaime",
-    "municipio": "Nova Santa Rita",
+  "Maringa 2": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Nova Veneza": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Nova Veneza",
+  "Maringa 3": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 1": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 4": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 2": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 5": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 5": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 7": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 6": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 8": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 8": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 10": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 9": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 11": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 10": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 12": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 11": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 13": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 13": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 14": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 15": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 15": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 16": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 16": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 17": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 17": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 18": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Maringa 18": {
+    "coordenador": "Graziele Pacheco",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Maringa",
     "uf": "RS"
   },
-  "Novo Hamburgo 19": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Ampere": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Ampere",
     "uf": "RS"
   },
-  "Novo Hamburgo 21": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cafelândia": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cafelândia",
     "uf": "RS"
   },
-  "Novo Hamburgo 22": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 1": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 23": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 2": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 24": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 3": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 25": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 4": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 26": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 5": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 27": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Cascavel 6": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cascavel",
     "uf": "RS"
   },
-  "Novo Hamburgo 28": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Coronel Vivida": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Coronel Vivida",
     "uf": "RS"
   },
-  "Novo Hamburgo 29": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Dois Vizinhos 1": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Dois Vizinhos",
     "uf": "RS"
   },
-  "Novo Hamburgo 30": {
-    "coordenador": "Stefany Silveira",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Novo Hamburgo",
+  "Dois Vizinhos 2": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Dois Vizinhos",
     "uf": "RS"
   },
-  "Osorio 1": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Osorio",
+  "Francisco Beltrao 1": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Francisco Beltrao",
     "uf": "RS"
   },
-  "Osorio 2": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Osorio",
+  "Francisco Beltrao 2": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Francisco Beltrao",
     "uf": "RS"
   },
-  "Osorio 4": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Osorio",
+  "Francisco Beltrao 3": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Francisco Beltrao",
     "uf": "RS"
   },
-  "Osorio 5": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Osorio",
+  "Itapejara D'Oeste": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Itapejara D'Oeste",
     "uf": "RS"
   },
-  "Osorio 6": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Osorio",
+  "Palmas 1": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Palmas",
     "uf": "RS"
   },
-  "Palhoca 1": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Palhoca",
+  "Palmas 2": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Palmas",
     "uf": "RS"
   },
-  "Palhoca 2": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Palhoca",
+  "Quedas do Iguacu": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Quedas do Iguacu",
     "uf": "RS"
   },
-  "Palhoca 3": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Palhoca",
+  "Realeza": {
+    "coordenador": "Guilber Mendes Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Realeza",
     "uf": "RS"
   },
-  "Palhoca 4": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Palhoca",
+  "Araruna": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Araruna",
     "uf": "RS"
   },
-  "Palhoca 5": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Palhoca",
+  "Campo Mourao 1": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Campo Mourao",
     "uf": "RS"
   },
-  "Palmares do Sul 2": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Palmares do Sul",
+  "Campo Mourao 2": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Campo Mourao",
     "uf": "RS"
   },
-  "Parobe 1": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Parobe",
+  "Cianorte 1": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cianorte",
     "uf": "RS"
   },
-  "Parobe 2": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Parobe",
+  "Cianorte 2": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cianorte",
     "uf": "RS"
   },
-  "Parobe 3": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Parobe",
+  "Cianorte 3": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cianorte",
     "uf": "RS"
   },
-  "Passo de Torres": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Passo de Torres",
+  "Cianorte 4": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cianorte",
     "uf": "RS"
   },
-  "Penha": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Penha",
+  "Cruzeiro do Oeste": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Cruzeiro do Oeste",
     "uf": "RS"
   },
-  "Portao 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Portao",
+  "Engenheiro Beltrão": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Engenheiro Beltrão",
     "uf": "RS"
   },
-  "Portao 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Portao",
+  "Goioerê": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Goioerê",
     "uf": "RS"
   },
-  "Portao 3": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Portao",
+  "Guaira": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Guaira",
     "uf": "RS"
   },
-  "Porto Alegre 1": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Mandaguaçu": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Mandaguaçu",
     "uf": "RS"
   },
-  "Porto Alegre 2": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Paicandu": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Paicandu",
     "uf": "RS"
   },
-  "Porto Alegre 4": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Palotina": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Palotina",
     "uf": "RS"
   },
-  "Porto Alegre 6 - Nova": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Tapejara - PR": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Tapejara - PR",
     "uf": "RS"
   },
-  "Porto Alegre 8": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Terra Boa": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Terra Boa",
     "uf": "RS"
   },
-  "Porto Alegre 9": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Umuarama 1": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Umuarama",
     "uf": "RS"
   },
-  "Porto Alegre 10": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Umuarama 2": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Umuarama",
     "uf": "RS"
   },
-  "Porto Alegre 13": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Umuarama 3": {
+    "coordenador": "Juliana Caneia Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Umuarama",
     "uf": "RS"
   },
-  "Porto Alegre 14": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Alto Parana": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Alto Parana",
     "uf": "RS"
   },
-  "Porto Alegre 15": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Astorga": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Astorga",
     "uf": "RS"
   },
-  "Porto Alegre 16": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Colorado - PR": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Colorado - PR",
     "uf": "RS"
   },
-  "Porto Alegre 18": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Jaguapitã": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Jaguapitã",
     "uf": "RS"
   },
-  "Porto Alegre 19": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Loanda 1": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Loanda",
     "uf": "RS"
   },
-  "Porto Alegre 20": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Loanda 2": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Loanda",
     "uf": "RS"
   },
-  "Porto Alegre 21": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Nova Esperanca 1": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Nova Esperanca",
     "uf": "RS"
   },
-  "Porto Alegre 22": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Nova Esperanca 2": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Nova Esperanca",
     "uf": "RS"
   },
-  "Porto Alegre 23": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Nova Londrina": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Nova Londrina",
     "uf": "RS"
   },
-  "Porto Alegre 27": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Paraíso do Norte": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Paraíso do Norte",
     "uf": "RS"
   },
-  "Porto Alegre 29": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Paranavaí 1": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Paranavaí",
     "uf": "RS"
   },
-  "Porto Alegre 30": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Paranavaí 2": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Paranavaí",
     "uf": "RS"
   },
-  "Porto Alegre 31": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Paranavaí 3": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Paranavaí",
     "uf": "RS"
   },
-  "Porto Alegre 33": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Fé": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Santa Fé",
     "uf": "RS"
   },
-  "Porto Alegre 34-Shop": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Sarandi 1 - PR": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Porto Alegre 35": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Sarandi 2 - PR": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Porto Alegre 36": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Sarandi 4 - PR": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Sarandi",
     "uf": "RS"
   },
-  "Porto Alegre 38-Shop": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Terra Rica": {
+    "coordenador": "Wyllames Amorim Trainee",
+    "distrital": "Rodrigo Ferreira",
+    "municipio": "Terra Rica",
     "uf": "RS"
   },
-  "Porto Alegre 41": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 6": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 42": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 7": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 45": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 9 - Hosp": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 46": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 10": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 49": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 11": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 50": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 13": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 52": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 15": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 53": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 17": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 55": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 19": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 56": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 24": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 57": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 28- Shop": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 58": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 36": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 59": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 37": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 61": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 38": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 62": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 40": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 63": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 41": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 64": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 42": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 65": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 46": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 66": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 47 Nova": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 71": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Maria 48": {
+    "coordenador": "Igor Ferreira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Porto Alegre 72 - Hosp": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Arroio do Tigre": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Arroio do Tigre",
     "uf": "RS"
   },
-  "Porto Alegre 73": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 1": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 74": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 2": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 75": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 3": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 76": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 4": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 77": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 5": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 78": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 6": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 80": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 7": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 81": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cachoeira 9": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Cachoeira",
     "uf": "RS"
   },
-  "Porto Alegre 82": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Candelaria 1": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Candelaria",
     "uf": "RS"
   },
-  "Porto Alegre 83": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Candelaria 2": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Candelaria",
     "uf": "RS"
   },
-  "Porto Alegre 84": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Candelaria 3": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Candelaria",
     "uf": "RS"
   },
-  "Porto Alegre 85": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Rio Pardo 1": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Rio Pardo",
     "uf": "RS"
   },
-  "Porto Alegre 86": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Rio Pardo 2": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Rio Pardo",
     "uf": "RS"
   },
-  "Porto Alegre 87": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Rio Pardo 3": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Rio Pardo",
     "uf": "RS"
   },
-  "Porto Alegre 88": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Salto Do Jacui": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Salto Do Jacui",
     "uf": "RS"
   },
-  "Porto Alegre 89": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Vera Cruz": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Vera Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 90": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Vera Cruz 2": {
+    "coordenador": "Jessica Barros Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Vera Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 91": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 1": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 92": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 3": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 93": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 4": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 94": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 5": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 95": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 6": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 96": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 7": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 97": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 8": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 98": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 9": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 100": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 11": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 101": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 13": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 102": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 14": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 103": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 15": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 104": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 16": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 105": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Santa Cruz 17": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Cruz",
     "uf": "RS"
   },
-  "Porto Alegre 106": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 1": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 107": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 2": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 108": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 3": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 109": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 4": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 110": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 5 Nova": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 111 - Shop": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 6": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 112": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Venancio Aires 8": {
+    "coordenador": "Jose Felipe Araujo Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Venancio Aires",
     "uf": "RS"
   },
-  "Porto Alegre 113": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Agudo": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Agudo",
     "uf": "RS"
   },
-  "Porto Alegre 114": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cacapava do Sul 1": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cacapava do Sul",
     "uf": "RS"
   },
-  "Porto Alegre 117": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cacapava do Sul 2": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cacapava do Sul",
     "uf": "RS"
   },
-  "Porto Alegre 119": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cacapava do Sul 3": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cacapava do Sul",
     "uf": "RS"
   },
-  "Porto Alegre 120": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cacapava do Sul 4": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cacapava do Sul",
     "uf": "RS"
   },
-  "Porto Alegre 121": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 1": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 122": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 2": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 123": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 3": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 124": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 4": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 125": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 5": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 126": {
-    "coordenador": "Luciano Silva",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 6": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 129": {
-    "coordenador": "Alison Freitas",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 7": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 130": {
-    "coordenador": "Liane Santos",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Cruz Alta 8": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Cruz Alta",
     "uf": "RS"
   },
-  "Porto Alegre 131": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Julio De Castilhos 1": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Julio De Castilhos",
     "uf": "RS"
   },
-  "Porto Alegre 132": {
-    "coordenador": "Rafael Kovalski",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre",
+  "Julio De Castilhos 2": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Julio De Castilhos",
     "uf": "RS"
   },
-  "Porto Alegre Dark Store": {
-    "coordenador": "Patricia Marranghello",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Porto Alegre Dark Store",
+  "Restinga Seca": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Restinga Seca",
     "uf": "RS"
   },
-  "Porto Belo": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Porto Belo",
+  "São Pedro do Sul Nova": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "São Pedro do Sul Nova",
     "uf": "RS"
   },
-  "Rio Negro": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Rio Negro",
+  "Sao Sepe 1": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Sao Sepe",
     "uf": "RS"
   },
-  "Rolante 1": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Rolante",
+  "Sao Sepe 2": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Sao Sepe",
     "uf": "RS"
   },
-  "Rolante 2": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Rolante",
+  "Tupancireta 1": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Tupancireta",
     "uf": "RS"
   },
-  "S.Fran Paula 1- Merc": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "S.Fran Paula",
+  "Tupancireta 2": {
+    "coordenador": "Lenin Brites",
+    "distrital": "Tiago Machado",
+    "municipio": "Tupancireta",
     "uf": "RS"
   },
-  "S.Fran Paula 2": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "S.Fran Paula",
+  "Santa Maria 1": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "S.Fran Paula 3": {
-    "coordenador": "Camilo Santiago",
-    "distrital": "Fabio Baldasso",
-    "municipio": "S.Fran Paula",
+  "Santa Maria 2": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Bento do Sul": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Bento do Sul",
+  "Santa Maria 3": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jeronimo 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Sao Jeronimo",
+  "Santa Maria 4": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jeronimo 2": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Sao Jeronimo",
+  "Santa Maria 5": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Joao Batista": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Joao Batista",
+  "Santa Maria 12": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Joaquim": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Joaquim",
+  "Santa Maria 14": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 1 - Nova": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 16": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 3": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 21": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 4": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 22": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 5": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 23": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 6": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 26": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 7": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 27": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 8": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 29": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Jose 9": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sao Jose",
+  "Santa Maria 30": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 1": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 34": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 2": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 39": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 4": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 43": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 5": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 44": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 6": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 45": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 7": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 49": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 8": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Santa Maria 50": {
+    "coordenador": "Monica Silveira",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Maria",
     "uf": "RS"
   },
-  "Sao Leopoldo 10": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Arvorezinha": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Arvorezinha",
     "uf": "RS"
   },
-  "Sao Leopoldo 13": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Barros Cassal": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Barros Cassal",
     "uf": "RS"
   },
-  "Sao Leopoldo 16": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Espumoso 1": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Espumoso",
     "uf": "RS"
   },
-  "Sao Leopoldo 17": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Espumoso 2": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Espumoso",
     "uf": "RS"
   },
-  "Sao Leopoldo 18": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Fontoura Xavier": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Fontoura Xavier",
     "uf": "RS"
   },
-  "Sao Leopoldo 19": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Leopoldo",
+  "Guapore 1": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Guapore",
     "uf": "RS"
   },
-  "São Leopoldo 20": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "São Leopoldo",
+  "Guapore 2": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Guapore",
     "uf": "RS"
   },
-  "São Leopoldo 21": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "São Leopoldo",
+  "Guapore 3": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Guapore",
     "uf": "RS"
   },
-  "São Ludgero": {
-    "coordenador": "Franciele Mariano Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "São Ludgero",
+  "Ibiruba 1": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Ibiruba",
     "uf": "RS"
   },
-  "Sao Marcos 1": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Sao Marcos",
+  "Ibiruba 2": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Ibiruba",
     "uf": "RS"
   },
-  "Sao Marcos 2": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Sao Marcos",
+  "Ibiruba 3": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Ibiruba",
     "uf": "RS"
   },
-  "Sao Sebastiao 1": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Sebastiao",
+  "Serafina Correa 1": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Serafina Correa",
     "uf": "RS"
   },
-  "Sao Sebastiao 2": {
-    "coordenador": "Tamires Vingert",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sao Sebastiao",
+  "Serafina Correa 2": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Serafina Correa",
     "uf": "RS"
   },
-  "Sapiranga 1": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Soledade 1": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Soledade",
     "uf": "RS"
   },
-  "Sapiranga 2": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Soledade 2": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Soledade",
     "uf": "RS"
   },
-  "Sapiranga 3": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Soledade 4": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Soledade",
     "uf": "RS"
   },
-  "Sapiranga 4": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Tapera": {
+    "coordenador": "Tatiane Schorr Trainee",
+    "distrital": "Tiago Machado",
+    "municipio": "Tapera",
     "uf": "RS"
   },
-  "Sapiranga 6": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Arroio Do Meio 1": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Arroio Do Meio",
     "uf": "RS"
   },
-  "Sapiranga 7": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapiranga",
+  "Arroio do Meio 2": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Arroio do Meio",
     "uf": "RS"
   },
-  "Sapucaia Sul 1- Merc": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Bom Retiro do Sul": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Bom Retiro do Sul",
     "uf": "RS"
   },
-  "Sapucaia Sul 2": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Encantado 1": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Encantado",
     "uf": "RS"
   },
-  "Sapucaia Sul 5": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Encantado 2": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Encantado",
     "uf": "RS"
   },
-  "Sapucaia Sul 6": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Encantado 3": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Encantado",
     "uf": "RS"
   },
-  "Sapucaia Sul 7": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Estrela 1": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Estrela",
     "uf": "RS"
   },
-  "Sapucaia Sul 8": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Estrela 2": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Estrela",
     "uf": "RS"
   },
-  "Sapucaia Sul 9": {
-    "coordenador": "Nitcheli Vier",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Sapucaia Sul",
+  "Lajeado 1": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sombrio 1": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sombrio",
+  "Lajeado 2": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sombrio 2": {
-    "coordenador": "Rafael Florencio",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sombrio",
+  "Lajeado 3 - Nova": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Amaro Imperatriz 1": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sto Amaro Imperatriz",
+  "Lajeado 4": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Amaro Imperatriz 2": {
-    "coordenador": "Reinaldo Mariano",
-    "distrital": "Cleiton Lima",
-    "municipio": "Sto Amaro Imperatriz",
+  "Lajeado 5": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Ant Patrulha 1": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Sto Ant Patrulha",
+  "Lajeado 6": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Ant Patrulha 2": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Sto Ant Patrulha",
+  "Lajeado 7": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Ant Patrulha 3": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Sto Ant Patrulha",
+  "Lajeado 8": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Sto Ant Patrulha 4": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Sto Ant Patrulha",
+  "Lajeado 9": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Taio": {
-    "coordenador": "Bruna Machado Trainee",
-    "distrital": "Cleiton Lima",
-    "municipio": "Taio",
+  "Lajeado 10": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Tapes 1": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Tapes",
+  "Lajeado 11": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Lajeado",
     "uf": "RS"
   },
-  "Tapes 2": {
-    "coordenador": "Fernanda Meireles",
-    "distrital": "Larissa Azambuja",
-    "municipio": "Tapes",
+  "Roca Sales": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Roca Sales",
     "uf": "RS"
   },
-  "Taquara 1": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
+  "Santa Clara do Sul": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Santa Clara do Sul",
     "uf": "RS"
   },
-  "Taquara 2": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
+  "Teutonia 1": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Teutonia",
     "uf": "RS"
   },
-  "Taquara 3": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
+  "Teutonia 2": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Teutonia",
     "uf": "RS"
   },
-  "Taquara 5": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
-    "uf": "RS"
-  },
-  "Taquara 6": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
-    "uf": "RS"
-  },
-  "Taquara 7": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Taquara",
-    "uf": "RS"
-  },
-  "Taquari 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Taquari",
-    "uf": "RS"
-  },
-  "Taquari 2": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Taquari",
-    "uf": "RS"
-  },
-  "Taquari 3": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Taquari",
-    "uf": "RS"
-  },
-  "Terra de Areia": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Terra de Areia",
-    "uf": "RS"
-  },
-  "Tijucas 1": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Tijucas",
-    "uf": "RS"
-  },
-  "Tijucas 2": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Tijucas",
-    "uf": "RS"
-  },
-  "Timbo": {
-    "coordenador": "Renata Almeida",
-    "distrital": "Cleiton Lima",
-    "municipio": "Timbo",
-    "uf": "RS"
-  },
-  "Torres 1": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 2": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 3": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 4": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 5": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 7 - Merc": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 8": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 9": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Torres 10": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Torres",
-    "uf": "RS"
-  },
-  "Tramandai 1": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 2": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 3": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 4": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 5": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 6": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Tramandai 7": {
-    "coordenador": "Renata Santos",
-    "distrital": "Andre Jaime",
-    "municipio": "Tramandai",
-    "uf": "RS"
-  },
-  "Três Cachoeiras": {
-    "coordenador": "Joao Chemin Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Três Cachoeiras",
-    "uf": "RS"
-  },
-  "Tres Coroas 1 - Merc": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Tres Coroas",
-    "uf": "RS"
-  },
-  "Tres Coroas 2": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Tres Coroas",
-    "uf": "RS"
-  },
-  "Tres Coroas 3": {
-    "coordenador": "Patricia Eitelvein",
-    "distrital": "Luiz Kuhn",
-    "municipio": "Tres Coroas",
-    "uf": "RS"
-  },
-  "Triunfo 1": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Triunfo",
-    "uf": "RS"
-  },
-  "Triunfo 2": {
-    "coordenador": "Daniela dos Santos Trainee",
-    "distrital": "Andre Jaime",
-    "municipio": "Triunfo",
-    "uf": "RS"
-  },
-  "Vacaria 1": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 2": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 3": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 4": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 5": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 6": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 7": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 8": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 9": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Vacaria 10": {
-    "coordenador": "Rafael Druzzian",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Vacaria",
-    "uf": "RS"
-  },
-  "Veranopolis 1": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Veranopolis",
-    "uf": "RS"
-  },
-  "Veranopolis 2": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Veranopolis",
-    "uf": "RS"
-  },
-  "Veranopolis 3": {
-    "coordenador": "Eduardo Brand",
-    "distrital": "Fabio Baldasso",
-    "municipio": "Veranopolis",
-    "uf": "RS"
-  },
-  "Viamao 1": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 2": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 4": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 5": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 6": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 7": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 9": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 11": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 12": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Viamao 13": {
-    "coordenador": "Andrea Lima",
-    "distrital": "Andre Jaime",
-    "municipio": "Viamao",
-    "uf": "RS"
-  },
-  "Xangri - La 1 - Merc": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
-    "uf": "RS"
-  },
-  "Xangri - La 2": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
-    "uf": "RS"
-  },
-  "Xangri - La 4 - Merc": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
-    "uf": "RS"
-  },
-  "Xangri - La 5 - Merc": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
-    "uf": "RS"
-  },
-  "Xangri - La 6": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
-    "uf": "RS"
-  },
-  "Xangri - La 7": {
-    "coordenador": "Paulo Xavier",
-    "distrital": "Andre Jaime",
-    "municipio": "Xangri - La",
+  "Teutonia 3": {
+    "coordenador": "Wagner Schuck",
+    "distrital": "Tiago Machado",
+    "municipio": "Teutonia",
     "uf": "RS"
   }
 }
