@@ -33,10 +33,11 @@ async function restoreCacheFromGCS() {
   try {
     const bucket = storageClient.bucket(GCS_BUCKET);
     const file = bucket.file('vtex_orders_cache.json');
-    const [exists] = await file.exists();
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('GCS timeout 3s')), 3000));
+    const [exists] = await Promise.race([file.exists(), timeout]);
     if (exists) {
       console.log('☁️ [VTEX Sync] Baixando vtex_orders_cache.json do GCS...');
-      await file.download({ destination: CACHE_FILE });
+      await Promise.race([file.download({ destination: CACHE_FILE }), timeout]);
       console.log('☁️ [VTEX Sync] Cache do VTEX restaurado do GCS.');
     }
   } catch (err) {
@@ -48,10 +49,14 @@ async function backupCacheToGCS() {
   if (!GCS_BUCKET || !storageClient || !fs.existsSync(CACHE_FILE)) return;
   try {
     const bucket = storageClient.bucket(GCS_BUCKET);
-    await bucket.upload(CACHE_FILE, {
-      destination: 'vtex_orders_cache.json',
-      metadata: { cacheControl: 'no-cache' }
-    });
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('GCS timeout 4s')), 4000));
+    await Promise.race([
+      bucket.upload(CACHE_FILE, {
+        destination: 'vtex_orders_cache.json',
+        metadata: { cacheControl: 'no-cache' }
+      }),
+      timeout
+    ]);
     console.log('☁️ [VTEX Sync] Cache vtex_orders_cache.json salvo no GCS com sucesso.');
   } catch (err) {
     console.error('❌ [VTEX Sync] Erro ao salvar backup do cache no GCS:', err.message);
@@ -296,15 +301,14 @@ async function syncVtexData(forceFull = false) {
   
   try {
     pruneCache(cache);
-    // Sincroniza os últimos 15 dias no primeiro sync ou se forçado, senão apenas hoje e ontem
-    const targetDays = (forceFull || !lastSyncTime) 
-      ? Array.from({ length: 16 }, (_, i) => i) 
-      : [0, 1];
+    // Sincroniza hoje e ontem por padrão, ou os últimos 15 dias se forçado
+    const targetDays = forceFull ? Array.from({ length: 16 }, (_, i) => i) : [0, 1];
       
     for (const d of targetDays) {
       console.log(`[VTEX Sync] Processando dia ${d}...`);
       await syncPeriod(d, cache);
       await saveCacheAsync(cache, CACHE_FILE);
+      await new Promise(r => setTimeout(r, 150));
     }
     pruneCache(cache);
     await saveCacheAsync(cache, CACHE_FILE);

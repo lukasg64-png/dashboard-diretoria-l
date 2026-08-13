@@ -289,12 +289,13 @@ async function downloadFromGCS(destPath, gcsFileName) {
   try {
     const bucket = storageClient.bucket(GCS_BUCKET);
     const file = bucket.file(fileName);
-    const [exists] = await file.exists();
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('GCS timeout (3s)')), 3000));
+    const [exists] = await Promise.race([file.exists(), timeout]);
     if (!exists) {
       console.log(`⚠️ Planilha ${fileName} não encontrada no bucket GCS. Usando fallback local.`);
       return false;
     }
-    await file.download({ destination: destPath });
+    await Promise.race([file.download({ destination: destPath }), timeout]);
     console.log(`☁️ Planilha ${fileName} baixada do GCS com sucesso.`);
     return true;
   } catch (err) {
@@ -1203,9 +1204,16 @@ app.listen(PORT, () => {
     console.log(`💓 Keep-alive ativo: pingando ${RENDER_URL}/api/health a cada 10 min`);
   }
 
+  loadFiliaisCadastro();
+  getCached().then(() => {
+    console.log('⚡ Cache pré-aquecido com sucesso no startup!');
+  }).catch(err => {
+    console.error('⚠️ Erro ao pré-aquecer cache:', err.message);
+  });
+
   setTimeout(() => {
     vtexSync.syncVtexData().catch(err => console.error('[Startup Sync] Falhou:', err.message));
-  }, 5000);
+  }, 10000);
 
   setInterval(() => {
     vtexSync.syncVtexData().catch(err => console.error('[Interval Sync] Falhou:', err.message));
