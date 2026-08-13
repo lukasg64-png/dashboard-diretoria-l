@@ -20,13 +20,13 @@ COPY server/ ./server/
 # Copy the built frontend static files from Stage 1
 COPY --from=frontend-builder /app/dist ./dist
 
-# Copy the base Excel file as a fallback
-COPY "base Dashboard.xlsx" "/app/base Dashboard.xlsx"
+# Copy the base CSV file as a fallback
+COPY "base_dashboard.csv" "/app/base_dashboard.csv"
 
-ENV EXCEL_PATH="/app/base Dashboard.xlsx"
+ENV CSV_PATH="/app/base_dashboard.csv"
 ENV PORT=8080
 ENV NODE_ENV=production
 
 EXPOSE 8080
 
-CMD ["node", "server/server.js"]
+CMD ["node", "--max-old-space-size=460", "server/server.js"]
