@@ -7,6 +7,7 @@
  * Arquivo padrão: ../base_dashboard.csv ou ../base Dashboard.xlsx
  */
 
+process.env.UV_THREADPOOL_SIZE = '64';
 require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 
 const express = require('express');

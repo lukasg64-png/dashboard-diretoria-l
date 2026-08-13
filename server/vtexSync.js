@@ -170,7 +170,7 @@ const getDayRange = (daysAgo, startFromIso = null) => {
 };
 
 async function fetchOrderDetails(orderIds, cache) {
-  const chunkSize = 30; // lote conservador para evitar limite de requisições do Render/VTEX
+  const chunkSize = 10; // lote pequeno para não sobrecarregar threadpool e CPU
   const totalChunks = Math.ceil(orderIds.length / chunkSize);
 
   for (let i = 0; i < orderIds.length; i += chunkSize) {
@@ -183,20 +183,20 @@ async function fetchOrderDetails(orderIds, cache) {
     
     const chunk = orderIds.slice(i, i + chunkSize);
     const promises = chunk.map(async id => {
-      let retries = 3;
-      let delay = 1000;
+      let retries = 2;
+      let delay = 800;
       while (retries > 0) {
         try {
           const res = await axios.get(
             `https://${account}.vtexcommercestable.com.br/api/oms/pvt/orders/${id}`,
-            { headers, timeout: 15000 }
+            { headers, timeout: 10000 }
           );
           return res.data;
         } catch (err) {
           retries--;
           if (retries > 0) {
             await new Promise(r => setTimeout(r, delay));
-            delay += 1000;
+            delay += 500;
           }
         }
       }
@@ -211,7 +211,7 @@ async function fetchOrderDetails(orderIds, cache) {
         cache[minified.orderId] = minified;
       }
     }
-    await new Promise(r => setTimeout(r, 200));
+    await new Promise(r => setTimeout(r, 250));
   }
 }
 
