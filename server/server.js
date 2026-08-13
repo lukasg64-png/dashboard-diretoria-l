@@ -425,8 +425,7 @@ async function readCSVAsync(filePath) {
       const filialName = String(getVal(C.filial) || '').trim();
       if (!filialName) return;
 
-      const storeInfo = lookupStore(filialName);
-      const cadastro = storeInfo || {};
+      const cadastro = filiaisCadastro[filialName] || lookupStore(filialName) || {};
       const distVal = (C.dist >= 0 ? String(getVal(C.dist) || '').trim() : '') || cadastro.distrital || '';
       const coordVal = (C.coord >= 0 ? String(getVal(C.coord) || '').trim() : '') || cadastro.coordenador || '';
 
@@ -1222,6 +1221,13 @@ app.listen(PORT, HOST, () => {
     }, PING_INTERVAL_MS);
     console.log(`💓 Keep-alive ativo: pingando ${RENDER_URL}/api/health a cada 10 min`);
   }
+
+  // Preaquece o cache de metas em background imediatamente na inicializacao
+  getCached().then(() => {
+    console.log('⚡ Cache de metas pre-aquecido com sucesso!');
+  }).catch(err => {
+    console.error('⚠️ Erro ao pre-aquecer cache:', err.message);
+  });
 
   setTimeout(() => {
     vtexSync.syncVtexData().catch(err => console.error('[Startup Sync] Falhou:', err.message));
