@@ -763,8 +763,12 @@ function CatTable({ grupos, linhas, labelAtualAno, searchTerm, viewMode, getMetr
 }
 
 function getBrtDateStr(daysAgo = 0) {
-  const d = new Date(Date.now() - daysAgo * 86400000);
-  return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+  try {
+    const brtMs = Date.now() - (daysAgo * 86400000) - (3 * 3600000);
+    return new Date(brtMs).toISOString().slice(0, 10);
+  } catch (e) {
+    return new Date().toISOString().slice(0, 10);
+  }
 }
 
 // ── COMPONENTE PRINCIPAL ─────────────────────────────────────────────────────

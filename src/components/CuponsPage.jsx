@@ -8,8 +8,12 @@ const fmtCurrency = v => new Intl.NumberFormat('pt-BR', { style: 'currency', cur
 const fmtInteger = v => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(v || 0);
 
 function getBrtDateStr(daysAgo = 0) {
-  const d = new Date(Date.now() - daysAgo * 86400000);
-  return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+  try {
+    const brtMs = Date.now() - (daysAgo * 86400000) - (3 * 3600000);
+    return new Date(brtMs).toISOString().slice(0, 10);
+  } catch (e) {
+    return new Date().toISOString().slice(0, 10);
+  }
 }
 
 export default function CuponsPage({
@@ -55,7 +59,7 @@ export default function CuponsPage({
 
   // Filtrar por data
   const dataByDate = useMemo(() => {
-    if (couponRaw.length === 0) return [];
+    if (!Array.isArray(couponRaw) || couponRaw.length === 0) return [];
 
     let startDate, endDate;
     const today = getBrtDateStr(0);
@@ -82,8 +86,8 @@ export default function CuponsPage({
         endDate = today;
         break;
       case 'custom':
-        startDate = fCustomDate;
-        endDate = fCustomDate;
+        startDate = fCustomDate || today;
+        endDate = fCustomDate || today;
         break;
       default:
         startDate = today;
@@ -91,7 +95,16 @@ export default function CuponsPage({
     }
 
     return couponRaw.filter(item => {
-      const itemBrtDate = item.date || (item.creationDate ? new Date(item.creationDate).toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' }) : null);
+      if (!item) return false;
+      let itemBrtDate = item.date;
+      if (!itemBrtDate && item.creationDate) {
+        try {
+          const d = new Date(item.creationDate);
+          if (!isNaN(d.getTime())) {
+            itemBrtDate = new Date(d.getTime() - 3 * 3600000).toISOString().slice(0, 10);
+          }
+        } catch (_) {}
+      }
       return itemBrtDate && itemBrtDate >= startDate && itemBrtDate <= endDate;
     });
   }, [couponRaw, fDateMode, fCustomDate]);
@@ -102,10 +115,10 @@ export default function CuponsPage({
     const coords = new Set();
     const filiais = new Set();
 
-    dataByDate.forEach(item => {
-      if (item.distrital) dists.add(item.distrital);
-      if (item.coordenador) coords.add(item.coordenador);
-      if (item.store) filiais.add(item.store);
+    (dataByDate || []).forEach(item => {
+      if (item && item.distrital) dists.add(item.distrital);
+      if (item && item.coordenador) coords.add(item.coordenador);
+      if (item && item.store) filiais.add(item.store);
     });
 
     return {
@@ -117,14 +130,14 @@ export default function CuponsPage({
 
   // Aplicar filtros
   const filteredData = useMemo(() => {
-    let result = dataByDate;
+    let result = dataByDate || [];
 
-    if (fDist !== 'all') result = result.filter(item => item.distrital === fDist);
-    if (fCoord !== 'all') result = result.filter(item => item.coordenador === fCoord);
-    if (fFilial !== 'all') result = result.filter(item => item.store === fFilial);
-    if (fCoupon.trim()) {
-      const query = fCoupon.toLowerCase().trim();
-      result = result.filter(item => item.coupon.toLowerCase().includes(query));
+    if (fDist && fDist !== 'all') result = result.filter(item => item && item.distrital === fDist);
+    if (fCoord && fCoord !== 'all') result = result.filter(item => item && item.coordenador === fCoord);
+    if (fFilial && fFilial !== 'all') result = result.filter(item => item && item.store === fFilial);
+    if (fCoupon && String(fCoupon).trim()) {
+      const query = String(fCoupon).toLowerCase().trim();
+      result = result.filter(item => item && item.coupon && String(item.coupon).toLowerCase().includes(query));
     }
 
     return result;
@@ -192,13 +205,14 @@ export default function CuponsPage({
   // Gráfico temporal
   const timeChartData = useMemo(() => {
     const groups = {};
-    filteredData.forEach(item => {
-      const date = item.date;
+    (filteredData || []).forEach(item => {
+      if (!item) return;
+      const date = item.date || 'Sem Data';
       if (!groups[date]) groups[date] = { date, cupons: 0, valor: 0 };
       groups[date].cupons++;
       groups[date].valor += item.value || 0;
     });
-    return Object.values(groups).sort((a, b) => a.date.localeCompare(b.date));
+    return Object.values(groups).sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')));
   }, [filteredData]);
 
   // Top 10 cupons para gráfico
@@ -273,13 +287,18 @@ export default function CuponsPage({
 
   // Label do período selecionado
   const periodLabel = useMemo(() => {
+    const safeFmt = str => {
+      if (!str || typeof str !== 'string') return '';
+      const p = str.split('-');
+      return p.length === 3 ? p.reverse().join('/') : str;
+    };
     switch (fDateMode) {
-      case 'hoje': return `Hoje (${getBrtDateStr(0).split('-').reverse().join('/')})`;
-      case 'ontem': return `Ontem (${getBrtDateStr(1).split('-').reverse().join('/')})`;
+      case 'hoje': return `Hoje (${safeFmt(getBrtDateStr(0))})`;
+      case 'ontem': return `Ontem (${safeFmt(getBrtDateStr(1))})`;
       case '3d': return 'Últimos 3 dias';
       case '7d': return 'Últimos 7 dias';
       case '15d': return 'Últimos 15 dias';
-      case 'custom': return fCustomDate.split('-').reverse().join('/');
+      case 'custom': return safeFmt(fCustomDate);
       default: return '';
     }
   }, [fDateMode, fCustomDate]);
@@ -632,11 +651,11 @@ export default function CuponsPage({
                           </defs>
                           <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
                           <XAxis dataKey="date" stroke="#94a3b8" fontSize={9} fontWeight={600}
-                            tickFormatter={v => v.split('-').slice(1).reverse().join('/')} />
+                            tickFormatter={v => v ? String(v).split('-').slice(1).reverse().join('/') : ''} />
                           <YAxis stroke="#94a3b8" fontSize={9} fontWeight={600} />
                           <Tooltip
                             contentStyle={tooltipStyle}
-                            labelFormatter={l => `Data: ${l.split('-').reverse().join('/')}`}
+                            labelFormatter={l => `Data: ${l ? String(l).split('-').reverse().join('/') : ''}`}
                             formatter={(v, name) => name === 'valor' ? [fmtCurrency(v), 'Faturamento'] : [fmtInteger(v), 'Cupons']}
                           />
                           <Area type="monotone" dataKey="cupons" stroke="#7c3aed" strokeWidth={2} fillOpacity={1} fill="url(#colorCupons)" />
