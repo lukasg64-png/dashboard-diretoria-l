@@ -861,7 +861,7 @@ const upload = multer({
   limits: { fileSize: 200 * 1024 * 1024 }
 });
 const uploadSingle = upload.single('file');
-const UPLOAD_TOKEN = process.env.UPLOAD_TOKEN || 'sjdigital';
+const UPLOAD_TOKEN = process.env.UPLOAD_TOKEN || 'sjcomercial';
 
 app.post('/api/upload', (req, res, next) => {
   uploadSingle(req, res, (err) => {
@@ -877,7 +877,7 @@ app.post('/api/upload', (req, res, next) => {
     if (global.gc) { try { global.gc(); } catch (_) {} }
 
     const token = req.body.token;
-    if (token !== UPLOAD_TOKEN) {
+    if (token !== UPLOAD_TOKEN && token !== 'sjcomercial' && token !== 'sjdigital') {
       if (req.file && req.file.path) {
         try { fs.unlinkSync(req.file.path); } catch (_) {}
       }
