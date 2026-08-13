@@ -1180,8 +1180,10 @@ if (fs.existsSync(distPath)) {
   console.log(`⚠️ Pasta dist do frontend não encontrada. Rodando apenas em modo API.`);
 }
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Dashboard Diretoria L (Laerte) — http://localhost:${PORT}`);
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => {
+  console.log(`\n🚀 Dashboard Diretoria L (Laerte) — http://${HOST}:${PORT}`);
   console.log(`📊 CSV: ${CSV_PATH} (${fs.existsSync(CSV_PATH) ? '✅' : '❌'})\n`);
 
   const RENDER_URL = process.env.RENDER_EXTERNAL_URL;
