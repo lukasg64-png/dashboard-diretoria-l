@@ -118,7 +118,7 @@ function pruneCache(cache) {
   let count = 0;
   for (const id in cache) {
     const order = cache[id];
-    if (order && order.creationDate) {
+    if (order && order.coupon && order.creationDate) {
       const brtDateStr = getBrtDateStrFromDate(order.creationDate);
       if (!keepDates.has(brtDateStr)) {
         delete cache[id];
@@ -130,7 +130,7 @@ function pruneCache(cache) {
     }
   }
   if (count > 0) {
-    console.log(`[VTEX Sync] Removidos ${count} pedidos antigos do cache.`);
+    console.log(`[VTEX Sync] Removidos ${count} pedidos sem cupom ou antigos do cache.`);
   }
 }
 
@@ -207,7 +207,7 @@ async function fetchOrderDetails(orderIds, cache) {
     const validResults = results.filter(r => r !== null);
     for (const order of validResults) {
       const minified = minifyOrder(order);
-      if (minified) {
+      if (minified && minified.coupon) {
         cache[minified.orderId] = minified;
       }
     }
