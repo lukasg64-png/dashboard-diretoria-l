@@ -4,6 +4,6 @@ dist/
 server/node_modules/
 *.log
 *.xlsx
-# Arquivos de dados — não commitar (são enviados via portal de upload)
-*.csv
-base_dashboard.csv
+# Permite base_dashboard.csv para ser enviado no deploy
+!base_dashboard.csv
+
