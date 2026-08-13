@@ -91,18 +91,18 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
     childOnRowClick = (row) => onFilterChange({ distrital: row.nome, coordenador: 'all', filial: 'all' });
     childTableCols = [
       { key: 'nome', label: 'Distrital', width: '200px', render: v => <span className="bold-text text-highlight">{v}</span> },
-      { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
-      { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
+      { key: 'venda_jul26', label: `Venda E-comm ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
+      { key: 'venda_jul25', label: `Venda E-comm ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
-      { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
+      { key: 'base_emp_jul26', label: 'Venda Rede', align: 'right', render: v => formatK(v) },
+      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'cupons_jul26', label: 'Cupons E-comm', align: 'right', render: v => formatK(v) }
     ];
     chartData = childTableRows.map(d => ({
       nome: d.nome,
       [chartYKey]: d.venda_jul26,
-      'Meta': d.meta_total,
-      cor: d.pct_meta_total >= 90 ? SUCCESS : d.pct_meta_total >= 60 ? WARNING : DANGER
+      'Venda E-comm': d.venda_jul26,
+      cor: d.evol_yoy >= 0 ? SUCCESS : DANGER
     }));
   } 
   else if (currentLevel === 'distrital') {
@@ -111,18 +111,18 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
     childOnRowClick = (row) => onFilterChange({ ...filters, coordenador: row.nome, filial: 'all' });
     childTableCols = [
       { key: 'nome', label: 'Coordenador', width: '200px', render: v => <span className="bold-text text-highlight">{v}</span> },
-      { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
-      { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
+      { key: 'venda_jul26', label: `Venda E-comm ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
+      { key: 'venda_jul25', label: `Venda E-comm ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
-      { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
+      { key: 'base_emp_jul26', label: 'Venda Rede', align: 'right', render: v => formatK(v) },
+      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'cupons_jul26', label: 'Cupons E-comm', align: 'right', render: v => formatK(v) }
     ];
     chartData = childTableRows.map(c => ({
       nome: c.nome,
       [chartYKey]: c.venda_jul26,
-      'Meta': c.meta_total,
-      cor: c.pct_meta_total >= 90 ? SUCCESS : c.pct_meta_total >= 60 ? WARNING : DANGER
+      'Venda E-comm': c.venda_jul26,
+      cor: c.evol_yoy >= 0 ? SUCCESS : DANGER
     }));
   } 
   else if (currentLevel === 'coordenador') {
@@ -131,40 +131,40 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
     childOnRowClick = (row) => onFilterChange({ ...filters, filial: row.nome });
     childTableCols = [
       { key: 'nome', label: 'Filial', width: '220px', render: v => <span className="bold-text text-highlight">{v}</span> },
-      { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
-      { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-      { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
-      { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
+      { key: 'venda_jul26', label: `Venda E-comm ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
+      { key: 'venda_jul25', label: `Venda E-comm ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
       { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
-      { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
+      { key: 'base_emp_jul26', label: 'Venda Rede', align: 'right', render: v => formatK(v) },
+      { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+      { key: 'cupons_jul26', label: 'Cupons E-comm', align: 'right', render: v => formatK(v) }
     ];
     chartData = childTableRows.slice(0, 15).map(f => ({
       nome: f.nome.replace('FILIAL ', 'F.'),
       [chartYKey]: f.venda_jul26,
-      'Meta': f.meta_total,
-      cor: f.pct_meta_total >= 90 ? SUCCESS : f.pct_meta_total >= 60 ? WARNING : DANGER
+      'Venda E-comm': f.venda_jul26,
+      cor: f.evol_yoy >= 0 ? SUCCESS : DANGER
     }));
   }
 
   // ── Categorias & Linhas para a Visualização de Abas ──
   const categoryCols = [
     { key: 'nome', label: 'Grupo / Categoria', width: '220px', render: v => <span className="bold-text">{v}</span> },
-    { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
-    { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-    { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
-    { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
+    { key: 'venda_jul26', label: `Venda E-comm ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
+    { key: 'venda_jul25', label: `Venda E-comm ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
     { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
-    { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
+    { key: 'base_emp_jul26', label: 'Venda Rede', align: 'right', render: v => formatK(v) },
+    { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+    { key: 'cupons_jul26', label: 'Cupons', align: 'right', render: v => formatK(v) }
   ];
 
   const lineCols = [
     { key: 'nome', label: 'Linha de Produto', width: '240px', render: v => <span className="bold-text">{v}</span> },
-    { key: 'venda_jul26', label: `Venda ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
-    { key: 'venda_jul25', label: `Venda ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
-    { key: 'meta_total', label: 'Meta Total', align: 'right', render: v => formatK(v) },
-    { key: 'pct_meta_total', label: '% Meta Total', align: 'right', width: '130px', type: 'progress' },
+    { key: 'venda_jul26', label: `Venda E-comm ${labelMesAtual}`, align: 'right', render: v => <strong>{formatK(v)}</strong> },
+    { key: 'venda_jul25', label: `Venda E-comm ${labelMesAtualAnoAnt}`, align: 'right', render: v => formatK(v) },
     { key: 'evol_yoy', label: 'Evolução YoY', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
-    { key: 'evol_mom', label: 'Crescimento MoM', align: 'right', valueClass: v => (v > 0 ? 'val-green' : v < 0 ? 'val-red' : '') },
+    { key: 'base_emp_jul26', label: 'Venda Rede', align: 'right', render: v => formatK(v) },
+    { key: 'pct_ecomm_jul26', label: '% Part E-comm', align: 'right', render: v => <span className="part-ecomm-value">{v ? v.toFixed(1) + '%' : '0.0%'}</span> },
+    { key: 'cupons_jul26', label: 'Cupons', align: 'right', render: v => formatK(v) }
   ];
 
   const categoryRows = (data?.grupos || []).map((g, i) => ({ ...g, _key: g.nomeOriginal || g.nome + i }));
@@ -173,14 +173,13 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
   const categoryChartData = categoryRows.slice(0, topNCats).map(g => ({
     nome: g.nome.length > 15 ? g.nome.substring(0, 13) + '…' : g.nome,
     [chartYKey]: g.venda_jul26,
-    'Meta': g.meta_total,
-    cor: g.pct_meta_total >= 90 ? SUCCESS : g.pct_meta_total >= 60 ? WARNING : DANGER
+    cor: g.evol_yoy >= 0 ? SUCCESS : DANGER
   }));
 
   const lineChartData = lineRows.slice(0, topNLines).map(l => ({
     nome: l.nome.length > 16 ? l.nome.substring(0, 14) + '…' : l.nome,
     [chartYKey]: l.venda_jul26,
-    cor: l.pct_meta_total >= 90 ? SUCCESS : l.pct_meta_total >= 60 ? WARNING : DANGER
+    cor: l.evol_yoy >= 0 ? SUCCESS : DANGER
   }));
 
   return (
@@ -241,41 +240,23 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
       <div className="dashboard-story-section">
         <div className="story-group-header">
           <div className="story-title-wrap">
-            <span className="story-badge ecommerce">DESEMPENHO</span>
-            <h2>Resumo Vendas & Metas ({data?.label_mes_atual || 'Jul/26'})</h2>
+            <span className="story-badge ecommerce">DESEMPENHO DIGITAL</span>
+            <h2>Resumo E-commerce — Diretoria L ({data?.label_mes_atual || 'Agosto/26'})</h2>
           </div>
-          <span className="story-context-desc">Desempenho consolidado de vendas, atingimento e metas</span>
+          <span className="story-context-desc">Desempenho financeiro e operação digital da Diretoria Laerti Siqueira</span>
         </div>
 
         <div className="kpi-grid">
           <KPICard 
-            title="Venda Total (Física + Digital)" 
+            title="Venda E-commerce" 
             value={formatK(t.venda_jul26)}
-            sub={formatK(t.meta_total)} 
-            subLabel="Meta Total:"
+            sub={`${labelMesAtualAnoAnt}: ${formatK(t.venda_jul25)}`} 
+            subLabel={`Venda ${labelMesAtualAnoAnt}:`}
             trend={t.evol_yoy} 
             trendLabel={`vs ${labelMesAtualAnoAnt}`}
             color={ACCENT} 
             loading={loading} 
             icon={ShoppingCart} 
-          />
-          <KPICard 
-            title="Atingimento Meta Total" 
-            value={`${(t.pct_meta_total || 0).toFixed(1)}%`}
-            sub={formatK(t.meta_total)} 
-            subLabel="Meta Total:"
-            color={(t.pct_meta_total || 0) >= 90 ? SUCCESS : (t.pct_meta_total || 0) >= 60 ? WARNING : DANGER}
-            loading={loading} 
-            icon={Target} 
-          />
-          <KPICard 
-            title="Desvio Meta Total" 
-            value={t.venda_jul26 != null && t.meta_total != null ? `${(t.venda_jul26 - t.meta_total) >= 0 ? '+' : ''}${formatK(t.venda_jul26 - t.meta_total)}` : '—'}
-            trend={t.meta_total ? ((t.venda_jul26 - t.meta_total) / t.meta_total) * 100 : undefined}
-            trendLabel="desvio"
-            color={t.venda_jul26 >= t.meta_total ? SUCCESS : DANGER}
-            loading={loading}
-            icon={t.venda_jul26 >= t.meta_total ? TrendingUp : TrendingDown}
           />
           <KPICard 
             title="Evolução YoY" 
@@ -287,13 +268,35 @@ export default function DashboardPrincipal({ data, loading, filters, onFilterCha
             icon={t.evol_yoy >= 0 ? TrendingUp : TrendingDown} 
           />
           <KPICard 
-            title="Crescimento MoM" 
-            value={`${t.evol_mom >= 0 ? '+' : ''}${(t.evol_mom || 0).toFixed(1)}%`}
-            sub={`${labelMesAnt}: ${formatK(t.venda_jun26)}`} 
-            subLabel="Venda Anterior:"
-            color={t.evol_mom >= 0 ? SUCCESS : DANGER}
+            title="Venda Total da Rede" 
+            value={formatK(t.base_emp_jul26)}
+            sub={`${labelMesAtualAnoAnt}: ${formatK(t.base_emp_jul25)}`} 
+            subLabel={`Rede ${labelMesAtualAnoAnt}:`}
+            color={ACCENT_ALT}
             loading={loading} 
-            icon={t.evol_mom >= 0 ? TrendingUp : TrendingDown} 
+            icon={DollarSign} 
+          />
+          <KPICard 
+            title="Participação E-commerce" 
+            value={`${(t.pct_ecomm_jul26 || 0).toFixed(1)}%`}
+            sub={`${labelMesAtualAnoAnt}: ${(t.pct_ecomm_jul25 || 0).toFixed(1)}%`} 
+            subLabel={`Part. ${labelMesAtualAnoAnt}:`}
+            trend={(t.pct_ecomm_jul26 || 0) - (t.pct_ecomm_jul25 || 0)} 
+            trendLabel={`p.p. vs ${labelMesAtualAnoAnt}`}
+            color={WARNING}
+            loading={loading} 
+            icon={PieChart} 
+          />
+          <KPICard 
+            title="Cupons E-commerce" 
+            value={formatK(t.cupons_jul26)}
+            sub={`${labelMesAtualAnoAnt}: ${formatK(t.cupons_jul25)}`} 
+            subLabel={`Cupons ${labelMesAtualAnoAnt}:`}
+            trend={t.cupons_jul25 ? ((t.cupons_jul26 - t.cupons_jul25) / t.cupons_jul25) * 100 : undefined}
+            trendLabel={`vs ${labelMesAtualAnoAnt}`}
+            color={SUCCESS}
+            loading={loading} 
+            icon={Tag} 
           />
         </div>
       </div>

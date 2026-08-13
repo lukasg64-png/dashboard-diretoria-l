@@ -352,20 +352,23 @@ async function readCSVAsync(filePath) {
 
         const distIndex = findColIndex(h => /distrital/i.test(h), -1);
         const coordIndex = findColIndex(h => /coordenador/i.test(h), -1);
-        const filialIndex = findColIndex(h => /desc_filial|filial/i.test(h), 3);
-        const grupoIndex = findColIndex(h => /desc_grupo|grupo/i.test(h), 4);
-        const linhaIndex = findColIndex(h => /desc_linha|linha/i.test(h), 5);
-        const metaParcIndex = findColIndex(h => /meta\s+parcial/i.test(h), 7);
-        const metaTotIndex = findColIndex(h => /^meta\s+(?!parcial)/i.test(h), 6);
+        const filialIndex = findColIndex(h => /desc_filial|filial/i.test(h), 0);
+        const grupoIndex = findColIndex(h => /desc_grupo|grupo/i.test(h), 1);
+        const linhaIndex = findColIndex(h => /desc_linha|linha/i.test(h), 2);
+        const metaParcIndex = findColIndex(h => /meta\s+parcial/i.test(h), 4);
+        const metaTotIndex = findColIndex(h => /^meta\s+(?!parcial)/i.test(h), 3);
         const metaTotHeader = header[metaTotIndex] || '';
         const currentMonth = metaTotHeader.replace(/^meta\s+/i, '').trim();
-        const monthRegex = currentMonth ? new RegExp(currentMonth, 'i') : /julho/i;
+        const monthRegex = currentMonth ? new RegExp(currentMonth, 'i') : /agosto|julho/i;
 
-        const vJul26Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 8);
-        const vJul25Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 9);
-        const vJun26Index = findColIndex(h => /venda/i.test(h) && !monthRegex.test(h) && /(26|2026)$/.test(h), 10);
-        const beJul26Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 11);
-        const beJul25Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 12);
+        const vJul26Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 5);
+        const vJul25Index = findColIndex(h => /venda/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 6);
+        const vJun26Index = findColIndex(h => /venda/i.test(h) && !monthRegex.test(h) && /(26|2026)$/.test(h), 7);
+        const beJul26Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 8);
+        const beJul25Index = findColIndex(h => /base\s+empresa/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 9);
+        const cupJul26Index = findColIndex(h => /cupons/i.test(h) && monthRegex.test(h) && /(26|2026)$/.test(h), 10);
+        const cupJul25Index = findColIndex(h => /cupons/i.test(h) && monthRegex.test(h) && /(25|2025)$/.test(h), 11);
+        const cupJun26Index = findColIndex(h => /cupons/i.test(h) && !monthRegex.test(h) && /(26|2026)$/.test(h), 12);
 
         C = {
           dist:      distIndex,
@@ -380,8 +383,11 @@ async function readCSVAsync(filePath) {
           vJun26:    vJun26Index,
           beJul26:   beJul26Index,
           beJul25:   beJul25Index,
-          labelJul26: String(header[vJul26Index] || 'Julho/26').replace('Venda Parcial ', ''),
-          labelJun26: String(header[vJun26Index] || 'Junho/26').replace('Venda Parcial ', '')
+          cupJul26:  cupJul26Index,
+          cupJul25:  cupJul25Index,
+          cupJun26:  cupJun26Index,
+          labelJul26: String(header[vJul26Index] || 'Agosto/26').replace('Venda Parcial ', ''),
+          labelJun26: String(header[vJun26Index] || 'Julho/26').replace('Venda Parcial ', '')
         };
         return;
       }
@@ -421,16 +427,16 @@ async function readCSVAsync(filePath) {
         linhaId:    getStrId(linhaVal),
         ufId:       getStrId(cadastro.uf || ''),
         munId:      getStrId(cadastro.municipio || ''),
-        mt:         safe(getVal(C.metaTot)) * 10,
-        mp:         safe(getVal(C.metaParc)) * 10,
+        mt:         safe(getVal(C.metaTot)),
+        mp:         safe(getVal(C.metaParc)),
         v26:        safe(getVal(C.vJul26)),
         v25:        safe(getVal(C.vJul25)),
         jun:        safe(getVal(C.vJun26)),
         be26:       safe(getVal(C.beJul26)),
         be25:       safe(getVal(C.beJul25)),
-        c26:        0,
-        c25:        0,
-        cJun:       0
+        c26:        safe(getVal(C.cupJul26)),
+        c25:        safe(getVal(C.cupJul25)),
+        cJun:       safe(getVal(C.cupJun26))
       });
     });
 
@@ -598,12 +604,14 @@ function aggregate(indices) {
       venda_jun26:     round2(v.jun),
       base_emp_jul26:  round2(v.be26),
       base_emp_jul25:  round2(v.be25),
+      cupons_jul26:    v.c26,
+      cupons_jul25:    v.c25,
       pct_meta_total:   pct(v.v26, v.mt),
       pct_meta_parcial: pct(v.v26, v.mp),
       evol_yoy:         varP(v.v26, v.v25),
       evol_mom:         varP(v.v26, v.jun),
-      pct_ecomm_jul26:  pct(v.v26_eb, v.be26_eb),
-      pct_ecomm_jul25:  pct(v.v25_eb, v.be25_eb),
+      pct_ecomm_jul26:  pct(v.v26, v.be26),
+      pct_ecomm_jul25:  pct(v.v25, v.be25),
     };
   }
 
