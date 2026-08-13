@@ -388,6 +388,27 @@ export default function CuponsPage({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
 
+      {/* ══════ BANNER DE STATUS E ÚLTIMA ATUALIZAÇÃO VTEX ══════ */}
+      <div style={{
+        background: '#fff', borderRadius: 8, padding: '10px 16px',
+        border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center',
+        justifyContent: 'space-between', flexWrap: 'wrap', gap: 10,
+        boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#0f2050', fontWeight: 600 }}>
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: couponSync?.isSyncing ? '#3b82f6' : '#10b981', display: 'inline-block' }} />
+          <span>⚡ Acompanhamento de Cupons VTEX OMS</span>
+          <span style={{ fontSize: 11, color: '#64748b', fontWeight: 500 }}>
+            (Última atualização VTEX: <strong style={{ color: '#0f2050' }}>{couponSync?.lastSyncTime ? new Date(couponSync.lastSyncTime).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }) : 'Carregando...'}</strong>)
+          </span>
+        </div>
+        {couponSync?.isSyncing && (
+          <span style={{ fontSize: 11, color: '#2563eb', fontWeight: 700 }}>
+            🔄 Sincronizando pedidos VTEX... {couponSync.progressPercent || 0}%
+          </span>
+        )}
+      </div>
+
       {/* ══════ BARRA DE FILTROS ══════ */}
       <div style={{
         background: 'linear-gradient(135deg, #0f2050 0%, #1e3a8a 100%)',

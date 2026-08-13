@@ -1974,9 +1974,9 @@ export default function DrillPanel({ onUpload }) {
               fontSize: 11, fontWeight: 900, color: '#fff',
             }}>SJ</div>
             <div>
-              <div style={{ fontSize: 13, fontWeight: 700 }}>Dashboard E-Commerce — Diretoria L</div>
-              <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)' }}>
-                {data?.arquivo || 'base Dashboard.xlsx'} · {labelAtual}
+              <div style={{ fontSize: 13, fontWeight: 700 }}>Dashboard E-Commerce — Diretoria L (Laerti Siqueira)</div>
+              <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)' }}>
+                Base Oficial: {data?.arquivo || 'base_dashboard.csv'} {data?.lido_em ? `· Lido em: ${data.lido_em}` : ''} · Mês: {labelAtual}
               </div>
             </div>
           </div>

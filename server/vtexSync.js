@@ -68,6 +68,10 @@ function loadOrdersCache() {
   if (ordersCache) return ordersCache;
   if (fs.existsSync(CACHE_FILE)) {
     try {
+      const stat = fs.statSync(CACHE_FILE);
+      if (!lastSyncTime && stat.mtime) {
+        lastSyncTime = stat.mtime.toISOString();
+      }
       ordersCache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8')) || {};
       return ordersCache;
     } catch (e) {
