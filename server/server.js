@@ -74,6 +74,7 @@ function loadFiliaisCadastro() {
     }
   }
 }
+loadFiliaisCadastro();
 
 // ── Mapeamento Fuzzy para Associação com a VTEX ────────────────────────────────
 function normalizeStoreName(str) {
@@ -1197,13 +1198,6 @@ app.listen(PORT, () => {
     }, PING_INTERVAL_MS);
     console.log(`💓 Keep-alive ativo: pingando ${RENDER_URL}/api/health a cada 10 min`);
   }
-
-  loadFiliaisCadastro();
-  getCached().then(() => {
-    console.log('⚡ Cache pré-aquecido com sucesso no startup!');
-  }).catch(err => {
-    console.error('⚠️ Erro ao pré-aquecer cache:', err.message);
-  });
 
   setTimeout(() => {
     vtexSync.syncVtexData().catch(err => console.error('[Startup Sync] Falhou:', err.message));
