@@ -674,26 +674,32 @@ async function getCached() {
   const now = Date.now();
   if (cache.data && (now - cache.ts) < CACHE_TTL_MS) return cache.data;
 
-  const tmp = path.join(require('os').tmpdir(), `dash_l_${Date.now()}.csv`);
-  let loaded = false;
-  if (GCS_BUCKET && storageClient) {
-    loaded = await downloadFromGCS(tmp, FILE_NAME);
+  // 1. Prioriza CSV local existente (leitura instantânea em ~140ms sem depender de rede)
+  let csvFileToRead = CSV_PATH;
+  let loadedFromGCS = false;
+
+  // 2. Se o CSV local não existir, tenta baixar do GCS
+  if (!fs.existsSync(csvFileToRead) && GCS_BUCKET && storageClient) {
+    const tmp = path.join(require('os').tmpdir(), `dash_l_${Date.now()}.csv`);
+    loadedFromGCS = await downloadFromGCS(tmp, FILE_NAME);
+    if (loadedFromGCS) {
+      csvFileToRead = tmp;
+    }
   }
 
-  let csvFileToRead = loaded ? tmp : CSV_PATH;
-  if (!fs.existsSync(csvFileToRead)) {
-    if (!loaded && fs.existsSync(EXCEL_PATH)) {
-      console.log(`📦 [server] CSV não encontrado em ${CSV_PATH}. Convertendo Excel (${EXCEL_PATH})...`);
-      try {
-        const wb = XLSX.readFile(EXCEL_PATH, { dense: true });
-        const sheetName = wb.SheetNames.find(n => n.toUpperCase().includes('BASE')) || wb.SheetNames[0];
-        const sheet = wb.Sheets[sheetName];
-        const csvContent = XLSX.utils.sheet_to_csv(sheet, { FS: ';' });
-        fs.writeFileSync(CSV_PATH, csvContent, 'utf-8');
-        console.log(`✅ [server] Excel convertido com sucesso para ${CSV_PATH} (${csvContent.length} bytes).`);
-      } catch (err) {
-        console.error(`❌ [server] Erro ao converter Excel:`, err.message);
-      }
+  // 3. Se não houver CSV, tenta converter o Excel local
+  if (!fs.existsSync(csvFileToRead) && fs.existsSync(EXCEL_PATH)) {
+    console.log(`📦 [server] CSV não encontrado em ${CSV_PATH}. Convertendo Excel (${EXCEL_PATH})...`);
+    try {
+      const wb = XLSX.readFile(EXCEL_PATH, { dense: true });
+      const sheetName = wb.SheetNames.find(n => n.toUpperCase().includes('BASE')) || wb.SheetNames[0];
+      const sheet = wb.Sheets[sheetName];
+      const csvContent = XLSX.utils.sheet_to_csv(sheet, { FS: ';' });
+      fs.writeFileSync(CSV_PATH, csvContent, 'utf-8');
+      console.log(`✅ [server] Excel convertido com sucesso para ${CSV_PATH} (${csvContent.length} bytes).`);
+      csvFileToRead = CSV_PATH;
+    } catch (err) {
+      console.error(`❌ [server] Erro ao converter Excel:`, err.message);
     }
   }
 
@@ -704,8 +710,8 @@ async function getCached() {
 
   const meta = await readCSVAsync(csvFileToRead);
 
-  if (loaded) {
-    try { fs.unlinkSync(tmp); } catch (_) {}
+  if (loadedFromGCS) {
+    try { fs.unlinkSync(csvFileToRead); } catch (_) {}
   }
 
   meta.globalAgg = aggregate();
