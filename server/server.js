@@ -11,6 +11,7 @@ require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') }
 
 const express = require('express');
 const cors    = require('cors');
+const compression = require('compression');
 const XLSX    = require('xlsx');
 const path    = require('path');
 const fs      = require('fs');
@@ -268,6 +269,7 @@ if (GCS_BUCKET) {
   console.log(`☁️ GCS configurado: bucket = ${GCS_BUCKET}`);
 }
 
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 
