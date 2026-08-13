@@ -75,7 +75,6 @@ function loadFiliaisCadastro() {
     }
   }
 }
-loadFiliaisCadastro();
 
 // ── Mapeamento Fuzzy para Associação com a VTEX ────────────────────────────────
 function normalizeStoreName(str) {
@@ -256,6 +255,16 @@ function lookupStore(vtexCleanName) {
   return null;
 }
 
+loadFiliaisCadastro();
+
+const VALID_DISTRITAIS = new Set([
+  'Andre Jaime',
+  'Cleiton Lima',
+  'Fabio Baldasso',
+  'Larissa Azambuja',
+  'Luiz Kuhn'
+]);
+
 // Configuração Google Cloud Storage (GCS)
 const GCS_BUCKET = process.env.GCS_BUCKET;
 const FILE_NAME  = process.env.GCS_FILE_NAME || 'base_dashboard_laerti.csv';
@@ -429,7 +438,7 @@ async function readCSVAsync(filePath) {
       const distVal = (C.dist >= 0 ? String(getVal(C.dist) || '').trim() : '') || cadastro.distrital || '';
       const coordVal = (C.coord >= 0 ? String(getVal(C.coord) || '').trim() : '') || cadastro.coordenador || '';
 
-      if (!distVal || !coordVal || distVal.toLowerCase().includes('total') || filialName.toLowerCase().includes('total') || filialName.toLowerCase().includes('geral')) {
+      if (!distVal || !VALID_DISTRITAIS.has(distVal) || !coordVal || distVal.toLowerCase().includes('total') || filialName.toLowerCase().includes('total') || filialName.toLowerCase().includes('geral')) {
         return;
       }
 
