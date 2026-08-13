@@ -715,6 +715,15 @@ async function getCached() {
   }
 
   meta.globalAgg = aggregate();
+  meta.globalOptions = {
+    distritoriais: meta.globalAgg.distritoriais.map(d => ({ nome: d.nome })),
+    coordenadores: meta.globalAgg.coordenadores.map(c => ({ nome: c.nome, distrital: c.distrital })),
+    filiais: meta.globalAgg.filiais.map(f => ({ nome: f.nome, coordenador: f.coordenador, uf: f.uf, municipio: f.municipio })),
+    grupos: meta.globalAgg.grupos.map(g => ({ nome: g.nome })),
+    linhas: meta.globalAgg.linhas.map(l => ({ nome: l.nome, grupo: l.grupo })),
+    ufs: [...new Set(meta.globalAgg.filiais.map(f => f.uf).filter(Boolean))].sort(),
+    cidades: [...new Set(meta.globalAgg.filiais.map(f => f.municipio).filter(Boolean))].sort()
+  };
   cache = { data: meta, ts: now };
   console.log(`[cache] dados brutos da Diretoria L carregados de ${path.basename(csvFileToRead)} às ${new Date().toLocaleTimeString('pt-BR')} — ${recordsCount} registros.`);
   return cache.data;
@@ -958,16 +967,7 @@ app.get('/api/metas', async (req, res) => {
     };
     const data = applyFilters(full, filters);
 
-    const globalAgg = full.globalAgg;
-    const options = {
-      distritoriais: globalAgg.distritoriais.map(d => ({ nome: d.nome })),
-      coordenadores: globalAgg.coordenadores.map(c => ({ nome: c.nome, distrital: c.distrital })),
-      filiais: globalAgg.filiais.map(f => ({ nome: f.nome, coordenador: f.coordenador, uf: f.uf, municipio: f.municipio })),
-      grupos: globalAgg.grupos.map(g => ({ nome: g.nome })),
-      linhas: globalAgg.linhas.map(l => ({ nome: l.nome, grupo: l.grupo })),
-      ufs: [...new Set(globalAgg.filiais.map(f => f.uf).filter(Boolean))].sort(),
-      cidades: [...new Set(globalAgg.filiais.map(f => f.municipio).filter(Boolean))].sort()
-    };
+    const options = full.globalOptions;
 
     res.json({ status: 'ok', data, filters, options, cache_age_ms: Date.now() - cache.ts });
   } catch (err) {
