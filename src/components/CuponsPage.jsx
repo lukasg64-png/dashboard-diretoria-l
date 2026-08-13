@@ -7,13 +7,9 @@ import API from '../api';
 const fmtCurrency = v => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(v || 0);
 const fmtInteger = v => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(v || 0);
 
-// Retorna data em formato BRT (YYYY-MM-DD) para "hoje", "ontem", etc.
 function getBrtDateStr(daysAgo = 0) {
-  const d = new Date();
-  d.setDate(d.getDate() - daysAgo);
-  // Ajuste manual UTC-3 para BRT
-  const brt = new Date(d.getTime() - 3 * 3600000);
-  return brt.toISOString().slice(0, 10);
+  const d = new Date(Date.now() - daysAgo * 86400000);
+  return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 }
 
 export default function CuponsPage({
@@ -94,10 +90,10 @@ export default function CuponsPage({
         endDate = today;
     }
 
-    return couponRaw.filter(item => 
-      (item.date >= startDate && item.date <= endDate) ||
-      (item.utcDate && item.utcDate >= startDate && item.utcDate <= endDate)
-    );
+    return couponRaw.filter(item => {
+      const itemBrtDate = item.date || (item.creationDate ? new Date(item.creationDate).toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' }) : null);
+      return itemBrtDate && itemBrtDate >= startDate && itemBrtDate <= endDate;
+    });
   }, [couponRaw, fDateMode, fCustomDate]);
 
   // Opções dinâmicas dos dropdowns
@@ -326,7 +322,8 @@ export default function CuponsPage({
 
     // 3. Aba Detalhes (Pedido a Pedido)
     const detailsSheetData = filteredData.map(item => ({
-      'Data': item.date ? item.date.split('-').reverse().join('/') : '',
+      'Nº Pedido': item.orderId || '',
+      'Data / Hora (BRT)': item.dateTimeStr || (item.date ? item.date.split('-').reverse().join('/') : ''),
       'Cupom': item.coupon || '',
       'Filial / Loja': item.store || '',
       'Coordenador': item.coordenador || '',
@@ -884,7 +881,7 @@ export default function CuponsPage({
               <table style={tableBase}>
                 <thead>
                   <tr style={theadRow}>
-                    <th style={{ ...thCell, textAlign: 'left' }}>Data</th>
+                    <th style={{ ...thCell, textAlign: 'left' }}>Data / Hora (BRT)</th>
                     <th style={{ ...thCell, textAlign: 'left' }}>Cupom</th>
                     <th style={{ ...thCell, textAlign: 'left' }}>Loja</th>
                     <th style={{ ...thCell, textAlign: 'left' }}>Coordenador</th>
@@ -897,7 +894,7 @@ export default function CuponsPage({
                     <tr><td colSpan={6} style={emptyCell}>Nenhuma utilização de cupom encontrada.</td></tr>
                   ) : paginatedData.map((item, idx) => (
                     <tr key={idx} style={tbodyRow}>
-                      <td style={{ ...tdCell, color: '#0f2050', fontWeight: 600 }}>{item.date ? item.date.split('-').reverse().join('/') : '—'}</td>
+                      <td style={{ ...tdCell, color: '#0f2050', fontWeight: 600 }}>{item.dateTimeStr || (item.date ? item.date.split('-').reverse().join('/') : '—')}</td>
                       <td style={tdCell}><span style={badgeStyle}>{item.coupon}</span></td>
                       <td style={{ ...tdCell, color: '#1e3a8a', fontWeight: 600 }}>{item.store}</td>
                       <td style={tdCell}>{item.coordenador}</td>

@@ -762,13 +762,9 @@ function CatTable({ grupos, linhas, labelAtualAno, searchTerm, viewMode, getMetr
   return <>{rows}</>;
 }
 
-// Retorna data em formato BRT (YYYY-MM-DD) para "hoje", "ontem", etc.
 function getBrtDateStr(daysAgo = 0) {
-  const d = new Date();
-  d.setDate(d.getDate() - daysAgo);
-  // Ajuste manual UTC-3 para BRT
-  const brt = new Date(d.getTime() - 3 * 3600000);
-  return brt.toISOString().slice(0, 10);
+  const d = new Date(Date.now() - daysAgo * 86400000);
+  return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
 }
 
 // ── COMPONENTE PRINCIPAL ─────────────────────────────────────────────────────
@@ -802,7 +798,7 @@ export default function DrillPanel({ onUpload }) {
   const [couponLoading, setCouponLoading] = useState(false);
 
   // Filtros específicos de cupons
-  const [couponDateMode, setCouponDateMode] = useState('7d'); // hoje, ontem, 3d, 7d, 15d, custom
+  const [couponDateMode, setCouponDateMode] = useState('hoje'); // hoje, ontem, 3d, 7d, 15d, custom
   const [couponCustomDate, setCouponCustomDate] = useState(getBrtDateStr(0));
   const [couponSearchTerm, setCouponSearchTerm] = useState('');
   const [couponChartType, setCouponChartType] = useState('hierarquia'); // hierarquia ou diario

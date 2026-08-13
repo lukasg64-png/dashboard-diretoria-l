@@ -674,7 +674,23 @@ async function getCached() {
     loaded = await downloadFromGCS(tmp, CSV_NAME);
   }
 
-  const csvFileToRead = loaded ? tmp : CSV_PATH;
+  let csvFileToRead = loaded ? tmp : CSV_PATH;
+  if (!fs.existsSync(csvFileToRead)) {
+    if (!loaded && fs.existsSync(EXCEL_PATH)) {
+      console.log(`📦 [server] CSV não encontrado em ${CSV_PATH}. Convertendo Excel (${EXCEL_PATH})...`);
+      try {
+        const wb = XLSX.readFile(EXCEL_PATH, { dense: true });
+        const sheetName = wb.SheetNames.find(n => n.toUpperCase().includes('BASE')) || wb.SheetNames[0];
+        const sheet = wb.Sheets[sheetName];
+        const csvContent = XLSX.utils.sheet_to_csv(sheet, { FS: ';' });
+        fs.writeFileSync(CSV_PATH, csvContent, 'utf-8');
+        console.log(`✅ [server] Excel convertido com sucesso para ${CSV_PATH} (${csvContent.length} bytes).`);
+      } catch (err) {
+        console.error(`❌ [server] Erro ao converter Excel:`, err.message);
+      }
+    }
+  }
+
   if (!fs.existsSync(csvFileToRead)) {
     console.warn(`⚠️ [getCached] CSV não encontrado em: ${csvFileToRead}. Aguardando upload do usuário.`);
     return null;
@@ -1026,11 +1042,16 @@ app.get('/api/coupons', (req, res) => {
         
         let dateStr = '';
         let utcDateStr = '';
+        let dateTimeStr = '';
         if (order.creationDate) {
           const d = new Date(order.creationDate);
-          utcDateStr = d.toISOString().slice(0, 10);
-          const brt = new Date(d.getTime() - 3 * 3600000);
-          dateStr = brt.toISOString().slice(0, 10);
+          if (!isNaN(d.getTime())) {
+            utcDateStr = d.toISOString().slice(0, 10);
+            dateStr = d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+            const ptDate = d.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+            const ptTime = d.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            dateTimeStr = `${ptDate} ${ptTime}`;
+          }
         }
 
         list.push({
@@ -1038,6 +1059,7 @@ app.get('/api/coupons', (req, res) => {
           date: dateStr,
           utcDate: utcDateStr,
           creationDate: order.creationDate || '',
+          dateTimeStr: dateTimeStr,
           coupon: String(order.coupon).toUpperCase().trim(),
           value: order.value ? order.value / 100 : 0,
           store: storeInfo.matchedKey || cleanSeller,

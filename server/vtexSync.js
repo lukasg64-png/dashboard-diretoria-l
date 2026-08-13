@@ -92,25 +92,24 @@ async function saveCacheAsync(cacheObj, filePath) {
   }
 }
 
+function getBrtDateStrFromDate(dateInput) {
+  const d = dateInput instanceof Date ? dateInput : new Date(dateInput);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+}
+
 function pruneCache(cache) {
-  const utcOffset = -3;
-  const getBrtDateStr = (daysAgo) => {
-    const d = new Date(Date.now() - daysAgo * 24 * 3600000);
-    const localDate = new Date(d.getTime() + (utcOffset * 3600000));
-    return localDate.toISOString().slice(0, 10);
-  };
   const keepDates = new Set();
   // Mantém os últimos 15 dias no cache
   for (let i = 0; i <= 15; i++) {
-    keepDates.add(getBrtDateStr(i));
+    const d = new Date(Date.now() - i * 86400000);
+    keepDates.add(getBrtDateStrFromDate(d));
   }
   let count = 0;
   for (const id in cache) {
     const order = cache[id];
     if (order && order.creationDate) {
-      const creation = new Date(order.creationDate);
-      const localCreation = new Date(creation.getTime() + (utcOffset * 3600000));
-      const brtDateStr = localCreation.toISOString().slice(0, 10);
+      const brtDateStr = getBrtDateStrFromDate(order.creationDate);
       if (!keepDates.has(brtDateStr)) {
         delete cache[id];
         count++;
@@ -139,14 +138,10 @@ function minifyOrder(order) {
 }
 
 const getDayRange = (daysAgo, startFromIso = null) => {
-  const d = new Date();
-  d.setDate(d.getDate() - daysAgo);
-  const utcOffset = -3;
-  const localDate = new Date(d.getTime() + (utcOffset * 3600000));
-  const dateString = localDate.toISOString().slice(0, 10);
-  const nextDay = new Date(localDate);
-  nextDay.setDate(nextDay.getDate() + 1);
-  const nextDayString = nextDay.toISOString().slice(0, 10);
+  const targetDate = new Date(Date.now() - daysAgo * 86400000);
+  const dateString = getBrtDateStrFromDate(targetDate);
+  const nextDay = new Date(targetDate.getTime() + 86400000);
+  const nextDayString = getBrtDateStrFromDate(nextDay);
 
   if (startFromIso) {
     return [{
@@ -155,7 +150,7 @@ const getDayRange = (daysAgo, startFromIso = null) => {
     }];
   }
 
-  // Divisão em 4 blocos de 6 horas para garantir performance
+  // Divisão em 4 blocos de 6 horas em UTC para cobrir o dia completo em BRT (00:00 - 23:59 BRT)
   return [
     { start: `${dateString}T03:00:00Z`, end: `${dateString}T08:59:59Z` },
     { start: `${dateString}T09:00:00Z`, end: `${dateString}T14:59:59Z` },
@@ -212,12 +207,10 @@ async function fetchOrderDetails(orderIds, cache) {
 
 async function syncPeriod(daysAgo, cache) {
   let startFromIso = null;
-  const utcOffset = -3;
-  const targetBrt = new Date(Date.now() + utcOffset * 3600000 - daysAgo * 86400000).toISOString().slice(0, 10);
+  const targetBrt = getBrtDateStrFromDate(Date.now() - daysAgo * 86400000);
   const dayOnly = Object.values(cache).filter(o => {
     if (!o.creationDate) return false;
-    const brt = new Date(new Date(o.creationDate).getTime() + utcOffset * 3600000);
-    return brt.toISOString().slice(0, 10) === targetBrt;
+    return getBrtDateStrFromDate(o.creationDate) === targetBrt;
   });
   
   // Sincronização incremental se já temos dados daquele dia no cache
