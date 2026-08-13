@@ -1043,41 +1043,53 @@ app.post('/api/refresh', async (req, res) => {
   }
 });
 
+let cachedCouponList = null;
+let cachedCouponTs = 0;
+
 app.get('/api/coupons', (req, res) => {
   try {
+    const now = Date.now();
+    if (cachedCouponList && (now - cachedCouponTs) < 10000) {
+      return res.json({
+        status: 'success',
+        sync: vtexSync.getSyncState(),
+        data: cachedCouponList
+      });
+    }
+
     const cache = vtexSync.getOrdersCache();
     const list = [];
     
     Object.values(cache).forEach(order => {
       if (order.coupon && order.status !== 'canceled') {
-        const seller = order.sellers?.[0]?.name || '';
-        const cleanSeller = seller.includes(' - ') ? seller.split(' - ')[0].trim() : seller;
-        const storeInfo = lookupStore(cleanSeller);
-        
-        // FILTRO: Apenas lojas da Diretoria L
-        if (!storeInfo) return;
-        
-        let dateStr = '';
-        let utcDateStr = '';
-        let dateTimeStr = '';
-        if (order.creationDate) {
-          const d = new Date(order.creationDate);
-          if (!isNaN(d.getTime())) {
-            utcDateStr = d.toISOString().slice(0, 10);
-            dateStr = d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
-            dateTimeStr = d.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+        if (order._storeInfo === undefined) {
+          const seller = order.sellers?.[0]?.name || '';
+          const cleanSeller = seller.includes(' - ') ? seller.split(' - ')[0].trim() : seller;
+          order._storeInfo = lookupStore(cleanSeller) || null;
+          order._cleanSeller = cleanSeller;
+
+          if (order.creationDate) {
+            const d = new Date(order.creationDate);
+            if (!isNaN(d.getTime())) {
+              order._utcDateStr = d.toISOString().slice(0, 10);
+              order._dateStr = d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+              order._dateTimeStr = d.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+            }
           }
         }
 
+        const storeInfo = order._storeInfo;
+        if (!storeInfo) return;
+
         list.push({
           orderId: order.orderId,
-          date: dateStr,
-          utcDate: utcDateStr,
+          date: order._dateStr || '',
+          utcDate: order._utcDateStr || '',
           creationDate: order.creationDate || '',
-          dateTimeStr: dateTimeStr,
+          dateTimeStr: order._dateTimeStr || '',
           coupon: String(order.coupon).toUpperCase().trim(),
           value: order.value ? order.value / 100 : 0,
-          store: storeInfo.matchedKey || cleanSeller,
+          store: storeInfo.matchedKey || order._cleanSeller || '',
           coordenador: storeInfo.coordenador || '',
           distrital: storeInfo.distrital || '',
           municipio: storeInfo.municipio || '',
@@ -1085,6 +1097,9 @@ app.get('/api/coupons', (req, res) => {
         });
       }
     });
+
+    cachedCouponList = list;
+    cachedCouponTs = now;
 
     res.json({
       status: 'success',

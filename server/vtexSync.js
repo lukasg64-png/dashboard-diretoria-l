@@ -78,6 +78,7 @@ function loadOrdersCache() {
         lastSyncTime = stat.mtime.toISOString();
       }
       ordersCache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8')) || {};
+      pruneCache(ordersCache);
       return ordersCache;
     } catch (e) {
       console.error('[VTEX Sync] Erro ao carregar cache de pedidos:', e.message);
