@@ -255,7 +255,7 @@ function lookupStore(vtexCleanName) {
 
 // Configuração Google Cloud Storage (GCS)
 const GCS_BUCKET = process.env.GCS_BUCKET;
-const FILE_NAME  = 'base_dashboard.csv';
+const FILE_NAME  = process.env.GCS_FILE_NAME || 'base_dashboard_laerti.csv';
 let storageClient = null;
 
 if (GCS_BUCKET) {
@@ -679,7 +679,7 @@ async function getCached() {
   const tmp = path.join(require('os').tmpdir(), `dash_l_${Date.now()}.csv`);
   let loaded = false;
   if (GCS_BUCKET && storageClient) {
-    loaded = await downloadFromGCS(tmp, CSV_NAME);
+    loaded = await downloadFromGCS(tmp, FILE_NAME);
   }
 
   let csvFileToRead = loaded ? tmp : CSV_PATH;
@@ -901,17 +901,22 @@ app.post('/api/upload', (req, res, next) => {
       }
 
       const finalUploadPath = convertedCsvPath || localTempPath;
+
+      console.log(`💾 Salvando CSV localmente em ${CSV_PATH}...`);
+      fs.copyFileSync(finalUploadPath, CSV_PATH);
+
       if (GCS_BUCKET && storageClient) {
         console.log(`☁️ Enviando CSV para o GCS gs://${GCS_BUCKET}/${FILE_NAME}...`);
-        const bucket = storageClient.bucket(GCS_BUCKET);
-        await bucket.upload(finalUploadPath, {
-          destination: FILE_NAME,
-          metadata: { cacheControl: 'no-cache' }
-        });
-        console.log(`☁️ CSV salvo no GCS.`);
-      } else {
-        console.log(`💾 Salvando CSV localmente em ${CSV_PATH}...`);
-        fs.copyFileSync(finalUploadPath, CSV_PATH);
+        try {
+          const bucket = storageClient.bucket(GCS_BUCKET);
+          await bucket.upload(finalUploadPath, {
+            destination: FILE_NAME,
+            metadata: { cacheControl: 'no-cache' }
+          });
+          console.log(`☁️ CSV salvo no GCS.`);
+        } catch (gcsErr) {
+          console.warn(`⚠️ Não foi possível salvar no GCS (${gcsErr.message}), mantendo salvo localmente.`);
+        }
       }
     } catch (err) {
       try { fs.unlinkSync(localTempPath); } catch (_) {}
