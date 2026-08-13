@@ -97,8 +97,7 @@ export default function CuponsPage({
     return couponRaw.filter(item => {
       if (!item) return false;
       const d = item.date;
-      const u = item.utcDate;
-      return (d && d >= startDate && d <= endDate) || (u && u >= startDate && u <= endDate);
+      return Boolean(d && d >= startDate && d <= endDate);
     });
   }, [couponRaw, fDateMode, fCustomDate]);
 

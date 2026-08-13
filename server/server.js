@@ -329,11 +329,30 @@ function getStrVal(id) {
   return stringPool[id] || '';
 }
 
-// ─── Leitura por Stream de CSV (Usa quase 0 de RAM e é 15x mais rápido) ────
+// ─── Leitura por Stream de CSV (Zero objetos intermediários, ultra-rápido e econômico em RAM) ────
 async function readCSVAsync(filePath) {
   clearCache();
   return new Promise((resolve, reject) => {
-    const tempRecords = [];
+    let capacity = 350000;
+    idMatrix = new Int32Array(capacity * 8);
+    valMatrix = new Float64Array(capacity * 10);
+    recordsCount = 0;
+
+    function ensureCap(needed) {
+      if (needed > capacity) {
+        const newCap = Math.max(needed, capacity * 2);
+        const newId = new Int32Array(newCap * 8);
+        newId.set(idMatrix.subarray(0, recordsCount * 8));
+        idMatrix = newId;
+
+        const newVal = new Float64Array(newCap * 10);
+        newVal.set(valMatrix.subarray(0, recordsCount * 10));
+        valMatrix = newVal;
+
+        capacity = newCap;
+      }
+    }
+
     const fileStream = fs.createReadStream(filePath, 'utf8');
     const rl = readline.createInterface({
       input: fileStream,
@@ -421,59 +440,34 @@ async function readCSVAsync(filePath) {
       const grupoVal = String(getVal(C.grupo) || '').trim();
       const linhaVal = String(getVal(C.linha) || '').trim();
 
-      tempRecords.push({
-        distId:     getStrId(distVal),
-        coordId:    getStrId(coordVal),
-        filialId,
-        grupoId:    getStrId(grupoVal),
-        subgrupoId: -1,
-        linhaId:    getStrId(linhaVal),
-        ufId:       getStrId(cadastro.uf || ''),
-        munId:      getStrId(cadastro.municipio || ''),
-        mt:         safe(getVal(C.metaTot)),
-        mp:         safe(getVal(C.metaParc)),
-        v26:        safe(getVal(C.vJul26)),
-        v25:        safe(getVal(C.vJul25)),
-        jun:        safe(getVal(C.vJun26)),
-        be26:       safe(getVal(C.beJul26)),
-        be25:       safe(getVal(C.beJul25)),
-        c26:        safe(getVal(C.cupJul26)),
-        c25:        safe(getVal(C.cupJul25)),
-        cJun:       safe(getVal(C.cupJun26))
-      });
+      ensureCap(recordsCount + 1);
+      const baseIdx = recordsCount * 8;
+      const baseValIdx = recordsCount * 10;
+
+      idMatrix[baseIdx + 0] = getStrId(distVal);
+      idMatrix[baseIdx + 1] = getStrId(coordVal);
+      idMatrix[baseIdx + 2] = filialId;
+      idMatrix[baseIdx + 3] = getStrId(grupoVal);
+      idMatrix[baseIdx + 4] = -1;
+      idMatrix[baseIdx + 5] = getStrId(linhaVal);
+      idMatrix[baseIdx + 6] = getStrId(cadastro.uf || '');
+      idMatrix[baseIdx + 7] = getStrId(cadastro.municipio || '');
+
+      valMatrix[baseValIdx + 0] = safe(getVal(C.metaTot));
+      valMatrix[baseValIdx + 1] = safe(getVal(C.metaParc));
+      valMatrix[baseValIdx + 2] = safe(getVal(C.vJul26));
+      valMatrix[baseValIdx + 3] = safe(getVal(C.vJul25));
+      valMatrix[baseValIdx + 4] = safe(getVal(C.vJun26));
+      valMatrix[baseValIdx + 5] = safe(getVal(C.beJul26));
+      valMatrix[baseValIdx + 6] = safe(getVal(C.beJul25));
+      valMatrix[baseValIdx + 7] = safe(getVal(C.cupJul26));
+      valMatrix[baseValIdx + 8] = safe(getVal(C.cupJul25));
+      valMatrix[baseValIdx + 9] = safe(getVal(C.cupJun26));
+
+      recordsCount++;
     });
 
     rl.on('close', () => {
-      recordsCount = tempRecords.length;
-      idMatrix = new Int32Array(recordsCount * 8);
-      valMatrix = new Float64Array(recordsCount * 10);
-
-      for (let i = 0; i < recordsCount; i++) {
-        const r = tempRecords[i];
-        const baseIdx = i * 8;
-        const baseValIdx = i * 10;
-
-        idMatrix[baseIdx + 0] = r.distId;
-        idMatrix[baseIdx + 1] = r.coordId;
-        idMatrix[baseIdx + 2] = r.filialId;
-        idMatrix[baseIdx + 3] = r.grupoId;
-        idMatrix[baseIdx + 4] = r.subgrupoId;
-        idMatrix[baseIdx + 5] = r.linhaId;
-        idMatrix[baseIdx + 6] = r.ufId;
-        idMatrix[baseIdx + 7] = r.munId;
-
-        valMatrix[baseValIdx + 0] = r.mt;
-        valMatrix[baseValIdx + 1] = r.mp;
-        valMatrix[baseValIdx + 2] = r.v26;
-        valMatrix[baseValIdx + 3] = r.v25;
-        valMatrix[baseValIdx + 4] = r.jun;
-        valMatrix[baseValIdx + 5] = r.be26;
-        valMatrix[baseValIdx + 6] = r.be25;
-        valMatrix[baseValIdx + 7] = 0;
-        valMatrix[baseValIdx + 8] = 0;
-        valMatrix[baseValIdx + 9] = 0;
-      }
-
       resolve({
         label_mes_atual: C.labelJul26 || 'Julho/26',
         label_mes_ant:   C.labelJun26 || 'Junho/26',
