@@ -9,8 +9,8 @@ const fmtInteger = v => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 
 
 function getBrtDateStr(daysAgo = 0) {
   try {
-    const brtMs = Date.now() - (daysAgo * 86400000) - (3 * 3600000);
-    return new Date(brtMs).toISOString().slice(0, 10);
+    const d = new Date(Date.now() - daysAgo * 86400000);
+    return d.toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
   } catch (e) {
     return new Date().toISOString().slice(0, 10);
   }
